@@ -215,8 +215,10 @@ to be final. The public language roster lives in CONTRIBUTING.md.
   by origin and fails on anything attributed to this mod or a VFEP/VEF/SOS2/VGE seam.
   Wired into the release skill. Sibling-mod "dump WILL fail" warnings at launch are expected: the
   probe is ticked for every family mod but each boot loads only its own list.
-- **`.steamworkshop/`** does not exist yet; adopt the toolkit's `Description/<Language>.txt`
-  convention when there is a Workshop page.
+- **`.steamworkshop/`** holds the Workshop title and BBCode description per language
+  (`Description/<Language>.txt`, the toolkit's convention; its `README.md` has the format and
+  title rule). It is player-facing text and quotes def numbers, so a tuning change that moves
+  one updates `English.txt` in the same commit; the release skill translates it from there.
 
 **Releases:** run the `/release` skill, or by hand: add the version's `## [X.Y.Z]` section to
 `CHANGELOG.md`, bump `About/About.xml` `<modVersion>` and `Source/1.6/Properties/AssemblyInfo.cs`,

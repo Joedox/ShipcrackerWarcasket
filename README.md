@@ -4,8 +4,6 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.6-blue.svg)](https://rimworldgame.com/)
 [![VFE Pirates](https://img.shields.io/badge/Requires-VFE%20Pirates-orange.svg)](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948)
-[![Version](https://img.shields.io/badge/Version-0.1.0-brightgreen.svg)](https://github.com/sam-hunt/ShipcrackerWarcasket/releases)
-[![Development Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)](https://github.com/sam-hunt/ShipcrackerWarcasket/releases)
 
 ![Preview](About/Preview.png)
 
@@ -14,33 +12,44 @@
 Vanilla Factions Expanded - Pirates lets you weld a pawn into a warcasket: a steel shell,
 customised part by part at the foundry, with a range of sets that carries a colony from the
 industrial era into the late game. This mod adds one more set to that range: the Shipcracker, a
-single matched warcasket of armor, shoulder pads and helmet tailored to the specific end-game
-content Odyssey adds, made at the foundry like any other set.
+boarding suit whose armor carries drop thrusters that throw the wearer over walls and land hard
+enough to punch through them. In orbit the same thrusters become a long-range burn straight into
+an enemy hull.
 
-This mod is in early development. Nothing is implemented yet; the notes below describe the planned
-scope, not shipped content.
+Odyssey is optional. Without it, the Shipcracker is a planet-side breaching suit.
 
-- **One complete set** - armor, shoulder pads and helmet, made and worn through VFE Pirates' own
-  warcasket systems
-- **Odyssey-flavoured tuning** - built around the end-game content Odyssey adds
-- **Odyssey optional** - Odyssey-only content ships from a DLC-gated folder and never loads
-  without the DLC
-
-## Features (planned)
+## Features
 
 ### The Shipcracker Set
 
-- **Armor, shoulder pads and helmet** as a single matched warcasket set
-- **Built on VFE Pirates** rather than beside it: the foundry, entombing and removal surgery all
-  apply unchanged
-- **Tailored to Odyssey's end game**, complementing the sets VFE Pirates already ships
+Armor, shoulder pads and helmet, welded on at VFE Pirates' warcasket foundry and unlocked by its
+spacer warcaskets research. Close-combat plating in all three pieces, pitched between VFE
+Pirates' Brute and Guardian and priced a little under them.
 
-### Optional Odyssey Content
+- **Armor**: the drop engine. Carries the Breach Jump and its chemfuel tank, plus a shield bubble
+  against incoming fire
+- **Shoulder pads**: the breaching arms. Landings hit structures 50% harder, enough for plasteel
+  and uranium walls, and the wearer hits and dodges more often in melee
+- **Helmet**: the sealed helm. A built-in respirator keeps breathing at full capacity, plus a
+  small aiming speed bonus
+- **With Odyssey** the full set is fully vacuum rated, and the thrusters cost gravlite panels
+- **Built on VFE Pirates** rather than beside it: the foundry, entombing, customisation and
+  removal surgery all apply unchanged, and the pieces mix and match with VFE Pirates' own sets
 
-- Odyssey-specific content is folder-gated, so it does not load without the DLC
-- Without Odyssey, the set still works with VFE Pirates alone
+### Breach Jump
 
-No further mechanics, stats or names are finalized yet.
+- Jump up to 20 cells, no clear path needed, burning 20 chemfuel from a 100-unit tank
+- The landing blast knocks a door-sized hole in the wall beside it and wounds anyone caught in
+  it, allies included
+- Takeoff and landing crash through the ceiling unless the jump stays inside one room; mountain
+  roofs are too thick to break
+- The blast area is previewed at the cursor while targeting
+
+### Breach Burn
+
+In space the jump becomes the breach burn: no range limit and a much faster flight, but the way
+must be open. Every reachable cell in view is outlined while targeting, and breaking through a
+gravship's roof vents the room behind it.
 
 ## Requirements
 
@@ -48,7 +57,8 @@ No further mechanics, stats or names are finalized yet.
 - **Vanilla Factions Expanded - Pirates** (required), which itself requires
   **Vanilla Expanded Framework**
 - **Harmony** (auto-download from Steam Workshop if you don't have it)
-- **Odyssey DLC** is optional; Odyssey-specific content is gated and does not load without it
+- **Odyssey DLC** is optional; without it there is no space to fly the breach burn in, and the
+  gravlite panel cost drops out
 
 ## Installation
 
@@ -70,6 +80,11 @@ Coming with the first release.
 
 - **Safe to add** to existing saves.
 - **Not safe to remove** from saves while a pawn is welded into the set.
+- **Save Our Ship 2 / Universum**: EVA rated under exactly the same rules as VFE Pirates' own sets.
+- **Vanilla Gravship Expanded**: follows its vacuum rules for warcaskets, and the helmet carries its
+  own oxygen supply (refilled with oxygen canisters) so the set still needs no oxygen pack. The
+  wearer can cross open space terrain at about half walking speed, and the tank takes astrofuel
+  instead of chemfuel (10 per jump, so 10 jumps per tank) with a purple exhaust to match.
 - Not tested with Combat Extended.
 
 ## Contributing
