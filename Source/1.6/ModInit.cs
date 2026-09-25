@@ -21,6 +21,5 @@ public static class ModInit
         // The Harmony id only needs to be unique; convention is the mod's packageId.
         var harmony = new Harmony("shunter.shipcrackerwarcasket");
         harmony.PatchAll();
-        Log.Message($"[Shipcracker Warcasket] Initialized with {harmony.GetPatchedMethods().EnumerableCount()} patches.");
     }
 }
