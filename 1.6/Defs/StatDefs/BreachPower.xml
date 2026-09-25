@@ -10,7 +10,7 @@
   <StatDef>
     <defName>SCWC_BreachPower</defName>
     <label>breach power</label>
-    <description>A multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected.</description>
+    <description>Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected.</description>
     <category>BasicsPawn</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>

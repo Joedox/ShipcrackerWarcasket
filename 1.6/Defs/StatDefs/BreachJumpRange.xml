@@ -15,7 +15,7 @@
   <StatDef>
     <defName>SCWC_BreachJumpRange</defName>
     <label>breach jump range</label>
-    <description>The maximum distance of a breach jump under gravity.</description>
+    <description>The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight.</description>
     <category>BasicsPawn</category>
     <toStringStyle>FloatOne</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>
