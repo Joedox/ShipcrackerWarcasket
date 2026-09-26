@@ -21,7 +21,7 @@
       (Controller 12 for mech control, the utility sets 6, Brute 4); a fuel-burning drop
       thruster is Aerial-tier tech, so 6 fits the utility-set tier and the plating step is
       priced onto plasteel instead. At vanilla market values (plasteel 9, spacer component 200,
-      uranium 6) the full set welds for about 4690 silver without Odyssey: Siegebreaker 4195,
+      uranium 6) the full set welds for about 4780 silver without Odyssey: Siegebreaker 4195,
       Sarcophagus 4785, Guardian 5164, Brute 5220. The shoulders and helmet scale with the armor
       at the ratios the 10th-gen sets use between their pieces; see their headers for the
       arithmetic.
@@ -46,8 +46,9 @@
       both comps must sit on this one def, which is why the engine is here and not on the
       shoulders as on Aerial.
     - SCWC_BreachJumpRange +20: the set's whole planet-side range (the shoulders and helmet add
-      none; Aerial's full set reaches 40). In space the jump has no range limit and requires
-      line of sight instead.
+      none; VFEP's Aerial shoulders and helmet add 5 and 10 via Patches/AerialJumpRange.xml;
+      Aerial's full set reaches 40). In space the jump has no range limit and requires line of
+      sight instead.
     - Space walking and the astrofuel swap under Vanilla Gravship Expanded come from
       1.6/Mods/VanillaGravshipExpanded/Patches/; stock Odyssey space terrain is impassable, so
       the main tree carries neither.
