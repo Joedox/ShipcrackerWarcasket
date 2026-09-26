@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: breach jump range -->
+  <SCWC_BreachJumpRange.label>돌파 도약 거리</SCWC_BreachJumpRange.label>
+  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
+  <SCWC_BreachJumpRange.description>중력 아래에서 돌파 도약으로 이동할 수 있는 최대 거리입니다. 진공에서는 시야가 닿는 곳이라면 거리 제한 없이 도약할 수 있습니다.</SCWC_BreachJumpRange.description>
+
+  <!-- EN: breach power -->
+  <SCWC_BreachPower.label>돌파력</SCWC_BreachPower.label>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
+  <SCWC_BreachPower.description>돌파 도약의 착지가 벽과 기타 구조물에 입히는 피해의 배율입니다. 사람에게 입히는 피해에는 영향을 주지 않습니다.</SCWC_BreachPower.description>
+
+</LanguageData>

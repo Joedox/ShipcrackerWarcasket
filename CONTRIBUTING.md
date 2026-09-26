@@ -15,7 +15,7 @@ welcome too.
 | English              | Source           | -         |
 | Simplified Chinese   | Machine-assisted | Fable 5.1 |
 | Russian              | Machine-assisted | Fable 5.1 |
-| Korean               | Planned          | -         |
+| Korean               | Machine-assisted | Fable 5.1 |
 | German               | Planned          | -         |
 | Spanish              | Planned          | -         |
 | French               | Planned          | -         |
