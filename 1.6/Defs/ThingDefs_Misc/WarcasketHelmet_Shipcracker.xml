@@ -7,19 +7,23 @@
     uiIconScale included, is still a verbatim Siegebreaker copy (placeholder, per TODOs.md).
     The apparel tags follow the armor's header.
 
-    Tuning: costList ComponentSpacer 2 / Plasteel 60 (Siegebreaker 2 / 50) follows the armor's 6
-    components / 180 plasteel at the helmet-to-armor ratios the 10th-gen sets use: components
-    one third of the armor's (Siegebreaker, Guardian and Sarcophagus 2:6, Controller 4:12) and
-    plasteel roughly 0.35 to 0.4 (Siegebreaker 50/145, Guardian 70/200, Controller 60/150,
-    Sarcophagus 60/145; 180 x 0.35 to 0.4 is 63 to 72, rounded to 60, the 10th-gen helmet norm).
-    ArmorRating_Blunt 1.5 is the Guardian helmet's value; see the armor's header for the
-    set-wide close-combat plating rationale.
+    Tuning: costList ComponentSpacer 2 / Plasteel 70 (Siegebreaker 2 / 50, Guardian 2 / 70)
+    follows the armor's 6 components / 180 plasteel at the helmet-to-armor ratios the 10th-gen
+    sets use: components one third of the armor's (Siegebreaker, Guardian and Sarcophagus 2:6,
+    Controller 4:12) and plasteel roughly 0.35 to 0.4 (Siegebreaker 50/145, Guardian 70/200,
+    Controller 60/150, Sarcophagus 60/145; 180 x 0.35 to 0.4 is 63 to 72). Rounded up to the
+    Guardian helmet's 70 rather than down to the 60 norm because this piece carries the
+    Guardian helmet's plating plus a respirator and an aiming assist, so it must not also be
+    the cheaper of the two at the foundry. ArmorRating_Blunt 1.5 is the Guardian helmet's value;
+    see the armor's header for the set-wide close-combat plating rationale.
 
     Abilities, the sealed helm:
     - pawnCapacityMinLevels Breathing 1.0 through VEF's ApparelExtension: a built-in respirator,
       the Sarcophagus helmet's pattern for one capacity only.
-    - equippedStatFactors AimingDelayFactor x0.9: a small ranged buff so the helmet earns its
-      place without Odyssey (the set's melee lean sits on the shoulders).
+    - equippedStatFactors AimingDelayFactor x0.95: a small ranged buff so the helmet earns its
+      place without Odyssey (the set's melee lean sits on the shoulders). Kept small because the
+      foundry lets any spacer armor take this helmet, and no VFEP helmet offers a ranged factor
+      at all; VEF multiplies same-stat factors across worn pieces.
     - No jump-range contribution; see the armor's header.
     - Under Odyssey alone the set already totals VacuumResistance 1.0 (0.2 + 0.1 + 0.7). Under
       Vanilla Gravship Expanded the compat root lowers this piece to 0.65 (set 0.97) and gives
@@ -72,7 +76,7 @@
     </equippedStatOffsets>
     <costList>
       <ComponentSpacer>2</ComponentSpacer>
-      <Plasteel>60</Plasteel>
+      <Plasteel>70</Plasteel>
       <GravlitePanel MayRequire="Ludeon.RimWorld.Odyssey">10</GravlitePanel>
     </costList>
     <researchPrerequisites>
@@ -101,7 +105,7 @@
              VFEP_WarcasketHelmetBase carries; see the armor def's header. -->
         <priority>1</priority>
         <equippedStatFactors>
-          <AimingDelayFactor>0.9</AimingDelayFactor>
+          <AimingDelayFactor>0.95</AimingDelayFactor>
         </equippedStatFactors>
         <pawnCapacityMinLevels>
           <li>
