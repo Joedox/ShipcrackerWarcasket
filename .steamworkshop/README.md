@@ -33,5 +33,6 @@ differ: schinese, koreana, brazilian, latam, ...). The `release` skill diffs
 `English.txt` against the last release tag and refreshes the translations
 whenever it changed.
 
-Only `English.txt` exists so far, and it is a draft awaiting human review
-alongside the def text. The page does not exist until the first release.
+Every shipped language has a description file; the non-English ones are
+machine-assisted first passes pending native review. The page does not exist
+until the first release.

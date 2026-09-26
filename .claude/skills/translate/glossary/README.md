@@ -8,10 +8,6 @@ names siegebreaker/guardian/controller/sarcophagus/brute, and "warcasket
 foundry" are rendered, and which community VFEP translation, if any, they
 were grounded against), and any coined terms pending native review.
 
-**No language files exist yet.** This mod's English text is still
-placeholder (see the skill's note on the release gate); the first entry
-here lands with the first real translation pass.
-
 Family-shared, mod-independent findings, LanguageWorker mechanics, style
 and corpus rules, and vanilla-grounded common vocabulary (armor,
 helmet, plasteel, quality tiers, tech levels, and so on), live
