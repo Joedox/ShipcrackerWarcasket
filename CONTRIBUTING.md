@@ -19,7 +19,7 @@ welcome too.
 | German               | Machine-assisted | Fable 5.1 |
 | Spanish              | Machine-assisted | Fable 5.1 |
 | French               | Machine-assisted | Fable 5.1 |
-| Brazilian Portuguese | Planned          | -         |
+| Brazilian Portuguese | Machine-assisted | Fable 5.1 |
 | Japanese             | Planned          | -         |
 | Traditional Chinese  | Planned          | -         |
 

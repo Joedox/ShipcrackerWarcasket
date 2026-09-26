@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: breach jump range -->
+  <SCWC_BreachJumpRange.label>alcance do salto de irrupção</SCWC_BreachJumpRange.label>
+  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
+  <SCWC_BreachJumpRange.description>A distância máxima que um salto de irrupção leva o portador sob gravidade. No vácuo, o salto só é limitado pela linha de visão.</SCWC_BreachJumpRange.description>
+
+  <!-- EN: breach power -->
+  <SCWC_BreachPower.label>poder de irrupção</SCWC_BreachPower.label>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
+  <SCWC_BreachPower.description>Um multiplicador no dano que a aterrissagem de um salto de irrupção causa em paredes e outras estruturas. O dano a pessoas não é afetado.</SCWC_BreachPower.description>
+
+</LanguageData>
