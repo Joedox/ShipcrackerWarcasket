@@ -1,10 +1,8 @@
 # TODOs
 
-- test new modicon with accent
-- check whether aerial/shock warcasket abilities complement shipcracker
-- check the thruster glow in game (landed 2026-09-18: opacity curve in `1.6/Defs/AbilityDefs/BreachJump.xml`, tint and shader on the render node in the armor def, purple tint in the VGE root's astrofuel patch; MoteGlow is the additive alternative if it should brighten rather than overlay), at both close and Middle zoom and in the flight
 - check the breach jump / breach burn gizmo icons in game, with and without VGE (purple variants shadow the orange ones from `Mods/VanillaGravshipExpanded/Textures/`)
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
+- review pass on tightness of xml comments since they ship in the release bundle and bloat player downloads
 
 ## Scope
 
@@ -24,7 +22,13 @@
 
 - Acquisition: foundry recipe/research only, or also raid/trader presence? VFEP tags its own
   parts `WarcasketVeteran` for pawnkind generation; check `PawnKinds_Junkers.xml` before reusing
-  the tag, since reusing it puts our set on every Junker veteran.
+  the tag, since reusing it puts our set on every Junker veteran. Presence is already a
+  question of frequency, not of yes/no: VFEP's `PawnGenerator.GeneratePawn` postfix fills any
+  warcasket slot the apparel budget left empty from every loaded `WarcasketDef` at random, ours
+  included (`StaticStartup.FillWarcasketDefLists` has no tag or research filter), and the
+  `WarcasketAll` tag already makes all three pieces candidates for `VFEP_General`. AI pawns
+  never cast apparel abilities (VEF's `Pawn.TryGetAttackVerb` postfix only draws on
+  `LearnedAbilities`), so a raider in the set is a shielded 1.5-blunt spacer suit with no jump.
 - Research gating: which VFEP research project(s) to parent on (`ResearchProjects_Various.xml`).
 
 ## Infrastructure follow-ups
