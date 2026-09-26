@@ -20,15 +20,13 @@
 
 ## Open questions
 
-- Acquisition: foundry recipe/research only, or also raid/trader presence? VFEP tags its own
-  parts `WarcasketVeteran` for pawnkind generation; check `PawnKinds_Junkers.xml` before reusing
-  the tag, since reusing it puts our set on every Junker veteran. Presence is already a
-  question of frequency, not of yes/no: VFEP's `PawnGenerator.GeneratePawn` postfix fills any
-  warcasket slot the apparel budget left empty from every loaded `WarcasketDef` at random, ours
-  included (`StaticStartup.FillWarcasketDefLists` has no tag or research filter), and the
-  `WarcasketAll` tag already makes all three pieces candidates for `VFEP_General`. AI pawns
-  never cast apparel abilities (VEF's `Pawn.TryGetAttackVerb` postfix only draws on
-  `LearnedAbilities`), so a raider in the set is a shielded 1.5-blunt spacer suit with no jump.
+- Acquisition: foundry only, by construction. Warcasket parts are destroyed on drop and
+  untradeable, so raid presence (all three pieces carry `WarcasketVeteran` and `WarcasketAll`)
+  is threat and flavour, never loot. AI pawns never cast apparel abilities (VEF's
+  `Pawn.TryGetAttackVerb` postfix only draws on `LearnedAbilities`), so a raider in the set is a
+  shielded 1.5-blunt spacer suit with no jump. Still open: whether the Odyssey compat root
+  should add a dedicated tag hook so salvagers field the set more often than the uniform
+  veteran pick does.
 - Research gating: which VFEP research project(s) to parent on (`ResearchProjects_Various.xml`).
 
 ## Infrastructure follow-ups

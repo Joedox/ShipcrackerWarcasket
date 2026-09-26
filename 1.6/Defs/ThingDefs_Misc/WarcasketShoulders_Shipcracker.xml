@@ -114,11 +114,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <!-- Reusing WarcasketVeteran puts this set on every Junker/Mercenary
-             veteran-tier pawnkind (and Odyssey's salvager pawnkind); see
-             TODOs.md open question.
         <li>WarcasketVeteran</li>
-        -->
         <li>WarcasketAll</li>
       </tags>
     </apparel>
