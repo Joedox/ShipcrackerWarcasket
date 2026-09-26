@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: breach jump range -->
+  <SCWC_BreachJumpRange.label>破墙跳跃距离</SCWC_BreachJumpRange.label>
+  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
+  <SCWC_BreachJumpRange.description>重力环境下破墙跳跃的最大距离。在真空中，跳跃距离只受视线限制。</SCWC_BreachJumpRange.description>
+
+  <!-- EN: breach power -->
+  <SCWC_BreachPower.label>破墙威力</SCWC_BreachPower.label>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
+  <SCWC_BreachPower.description>破墙跳跃着陆时对墙体等建筑结构造成的伤害乘数。对人员的伤害不受影响。</SCWC_BreachPower.description>
+</LanguageData>

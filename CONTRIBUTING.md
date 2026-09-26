@@ -13,7 +13,7 @@ welcome too.
 | Language             | Status           | Credit    |
 | -------------------- | ---------------- | --------- |
 | English              | Source           | -         |
-| Simplified Chinese   | Planned          | -         |
+| Simplified Chinese   | Machine-assisted | Fable 5.1 |
 | Russian              | Planned          | -         |
 | Korean               | Planned          | -         |
 | German               | Planned          | -         |
