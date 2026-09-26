@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: breach jump range -->
+  <SCWC_BreachJumpRange.label>Durchbruchssprungweite</SCWC_BreachJumpRange.label>
+  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
+  <SCWC_BreachJumpRange.description>Die maximale Entfernung, die der Träger unter Schwerkraft mit einem Durchbruchssprung zurücklegen kann. Im Vakuum begrenzt nur die Sichtlinie den Sprung.</SCWC_BreachJumpRange.description>
+
+  <!-- EN: breach power -->
+  <SCWC_BreachPower.label>Durchbruchskraft</SCWC_BreachPower.label>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
+  <SCWC_BreachPower.description>Ein Multiplikator auf den Schaden, den die Landung eines Durchbruchssprungs an Wänden und anderen Strukturen verursacht. Der Schaden an Personen bleibt unverändert.</SCWC_BreachPower.description>
+
+</LanguageData>
