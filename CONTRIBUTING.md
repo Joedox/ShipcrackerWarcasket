@@ -18,7 +18,7 @@ welcome too.
 | Korean               | Machine-assisted | Fable 5.1 |
 | German               | Machine-assisted | Fable 5.1 |
 | Spanish              | Machine-assisted | Fable 5.1 |
-| French               | Planned          | -         |
+| French               | Machine-assisted | Fable 5.1 |
 | Brazilian Portuguese | Planned          | -         |
 | Japanese             | Planned          | -         |
 | Traditional Chinese  | Planned          | -         |

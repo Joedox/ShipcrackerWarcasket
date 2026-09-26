@@ -1,0 +1,46 @@
+Sarcophage brise-coque
+
+Un nouveau sarcophage de niveau spatial pour [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948]Vanilla Factions Expanded - Pirates[/url].
+
+[h1]À propos[/h1]
+
+Le Brise-coque est une armure spécialisée dans l'assaut par abordage, inspirée de l'histoire "pirate" de l'extension Royalty (Shipcracker en anglais). Ses propulseurs de largage projettent le porteur par-dessus les murs, ou le font atterrir assez fort pour les enfoncer. En orbite, sans gravité pour la freiner, la poussée atteint n'importe quel point en ligne de vue. L'extension Odyssey est facultative : sans elle, le Brise-coque reste un poids lourd du corps à corps à la surface des planètes.
+
+[hr][/hr]
+[h2]L'ensemble[/h2]
+Les trois pièces sont blindées pour le corps à corps et se situent entre les ensembles Brise-siège, Brute et Gardien de VFE Pirates.
+[list]
+[*][b]Torse :[/b] le moteur de largage. Il donne la capacité « saut de brèche », embarque son réservoir de carburant et projette un bouclier d'énergie contre les tirs.
+[*][b]Épaulières :[/b] les bras de brèche. Les atterrissages frappent les structures 50% plus fort et démolissent même les murs en plastacier et en uranium. Elles améliorent aussi légèrement le combat en mêlée.
+[*][b]Casque :[/b] le heaume étanche. Un respirateur intégré maintient la respiration à pleine capacité, et un léger bonus accélère la visée.
+[/list]
+Avec Odyssey : l'ensemble complet résiste au vide, et ses fonctions supplémentaires se paient en panneaux de gravlite
+
+[hr][/hr]
+[h1]Compatibilité des mods[/h1]
+[list]
+[*]Peut être ajouté sans risque à une partie en cours
+[*]Ne peut pas être retiré sans risque tant qu'un colon est soudé dans l'ensemble
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948]Vanilla Factions Expanded - Pirates[/url] : requis.
+[*]Save Our Ship 2 : apte aux sorties extravéhiculaires, selon les mêmes règles que les ensembles de VFE Pirates
+[*]Vanilla Gravship Expanded : suit ses règles de vide pour les sarcophages, et le casque emporte sa propre réserve d'oxygène rechargeable. Le porteur se déplace plus vite dans l'espace, et le saut brûle de l'astrofuel au lieu du chemfuel (violet !)
+[*]Non testé avec Combat Extended (vos retours sont les bienvenus)
+[/list]
+
+[hr][/hr]
+[h1]FAQ[/h1]
+[b]Q : Faut-il Odyssey ?[/b]
+R : Non. Sans Odyssey, vous obtenez l'ensemble et le saut de brèche. La poussée de brèche n'existe que là où il y a de l'espace pour voler, et le coût en panneaux de gravlite disparaît.
+
+[b]Q : Faut-il VGE ?[/b]
+R : Non, même si le mod a clairement été pensé pour les combats entre vaisseaux de VGE2, et que la flamme violette a nettement plus d'allure.
+
+[b]Q : Comment l'obtenir ?[/b]
+R : Recherchez « sarcophages spatiaux », puis soudez-le sur un colon à la fonderie de sarcophages, comme tout autre ensemble. Combinez librement ses pièces avec celles des ensembles de VFE Pirates.
+
+[b]Q : Est-ce que ça a été fait avec l'aide d'une IA ?[/b]
+R : Une partie du code répétitif, et la plupart des localisations. Je suis ingénieur logiciel de métier, et j'écris du code depuis 25 ans. Tout le code est relu et testé manuellement. Tous les rapports de bugs et les conflits entre mods sont suivis personnellement, selon le temps et les détails disponibles. Tous les visuels sont soit commandés à des artistes humains, soit réalisés à la main dans Krita, soit les deux.
+
+[hr][/hr]
+[h1]Liens[/h1]
+Code source, téléchargements manuels et suivi des problèmes : [url=https://github.com/sam-hunt/ShipcrackerWarcasket]GitHub[/url]
