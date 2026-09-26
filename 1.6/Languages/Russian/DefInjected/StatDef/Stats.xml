@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: breach jump range -->
+  <SCWC_BreachJumpRange.label>дальность пробивного прыжка</SCWC_BreachJumpRange.label>
+  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
+  <SCWC_BreachJumpRange.description>Максимальная дальность пробивного прыжка в условиях гравитации. В вакууме прыжок ограничен только прямой видимостью.</SCWC_BreachJumpRange.description>
+  <!-- EN: breach power -->
+  <SCWC_BreachPower.label>сила пробоя</SCWC_BreachPower.label>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
+  <SCWC_BreachPower.description>Множитель урона, который приземление после пробивного прыжка наносит стенам и другим постройкам. На урон по людям не влияет.</SCWC_BreachPower.description>
+</LanguageData>

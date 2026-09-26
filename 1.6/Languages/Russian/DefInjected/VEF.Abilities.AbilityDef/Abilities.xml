@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: breach jump -->
+  <SCWC_BreachJump.label>пробивной прыжок</SCWC_BreachJump.label>
+  <!-- EN: Fire the armor's drop thrusters to jump to a location, landing hard enough to breach walls and hull plating. The jump is short but needs no clear path. -->
+  <SCWC_BreachJump.description>Запускает десантные двигатели брони и переносит владельца в выбранную точку. Приземление настолько жёсткое, что пробивает стены и обшивку корпуса. Прыжок короткий, зато препятствия на пути ему не помеха.</SCWC_BreachJump.description>
+  <!-- EN: In vacuum the burn has no range limit, but needs a clear line to the target. -->
+  <SCWC_BreachJump.modExtensions.0.vacuumDescription>В вакууме дальность рывка не ограничена, но цель должна быть в прямой видимости.</SCWC_BreachJump.modExtensions.0.vacuumDescription>
+  <!-- EN: breach burn -->
+  <SCWC_BreachJump.modExtensions.0.vacuumLabel>пробивной рывок</SCWC_BreachJump.modExtensions.0.vacuumLabel>
+  <!-- EN: Using ability: {0} -->
+  <SCWC_BreachJump.jobReportString>применяет способность «{0}»</SCWC_BreachJump.jobReportString>
+  <!-- EN: breach jump -->
+  <SCWC_BreachJump.verbProperties.label>пробивной прыжок</SCWC_BreachJump.verbProperties.label>
+</LanguageData>
