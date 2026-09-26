@@ -164,7 +164,7 @@
         <baseReloadTicks>60</baseReloadTicks>
         <soundReload>Standard_Reload</soundReload>
         <hotKey>Misc4</hotKey>
-        <chargeNoun>fuel</chargeNoun>
+        <chargeNoun>jump</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
       <li Class="VEF.Abilities.CompProperties_AbilitiesApparel">
