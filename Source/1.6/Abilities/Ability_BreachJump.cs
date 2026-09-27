@@ -12,7 +12,7 @@ using Ability = VEF.Abilities.Ability;
 
 namespace ShipcrackerWarcasket;
 
-// The Shipcracker armor's jump, modelled on VFEP's Ability_PowerJump (Aerial set):
+// The Shipcracker armor's jump, modeled on VFEP's Ability_PowerJump (Aerial set):
 //  - Planet: any walkable cell within SCWC_BreachJumpRange, no sight test (Aerial parity).
 //  - Space (Map.Biome.inVacuum or Tile.LayerDef.isSpace, both vanilla fields, so no DLC gate):
 //    unlimited range, target must be in line of sight.
@@ -178,7 +178,7 @@ public class Ability_BreachJump : Ability
             DrawSpaceValidCells();
     }
 
-    // Outlines the reachable cells inside the camera view in the range-ring colour. Only cells
+    // Outlines the reachable cells inside the camera view in the range-ring color. Only cells
     // in view are ever tested and results persist across frames, camera moves and wearer moves.
     // Each frame advances the sweep cursor through the view, testing cells that are not of the
     // current generation until SpacePreviewBudgetMs is spent; fresh cells are skipped for the

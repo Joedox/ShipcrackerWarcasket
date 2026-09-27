@@ -17,7 +17,7 @@ up, re-ground against them and prefer its renderings.
 | compound rule for Kriegssarg | always hyphenated to a set name or part: Schiffsknacker-Kriegssarg, Kriegssarg-Helm, Kriegssarg-Hülle, Kriegssarg-Schulterpanzer, Kriegssarg-Gießerei | Durchkopplung once a set prefix is present; kept uniform in descriptions too so labels and prose match. |
 | shipcracker (set name) | Schiffsknacker | Royalty `Shipcracker37.title` = Schiffsknacker (verbatim); Royalty `Apparel_ArmorLocust.description` also renders "shipcracking operations" as "das Knacken von Schiffen". |
 | shipcracker warcasket / shoulders / helmet (labels) | Schiffsknacker-Kriegssarg / Schiffsknacker-Kriegssarg-Schulterpanzer / Schiffsknacker-Kriegssarg-Helm | VFEP's `<set> warcasket <part>` label pattern. |
-| pauldrons / shoulders / shoulder pads | Schulterpanzer | Ordinary German armour term; "Schultern" alone reads as the body part. Used for VFEP's "warcasket shoulders" pattern and the Workshop "shoulder pads". |
+| pauldrons / shoulders / shoulder pads | Schulterpanzer | Ordinary German armor term; "Schultern" alone reads as the body part. Used for VFEP's "warcasket shoulders" pattern and the Workshop "shoulder pads". |
 | warcasket foundry (coined) | Kriegssarg-Gießerei | foundry = Gießerei per Core `FoundryApprentice76.title` = Gießereilehrling. |
 | entomb (coined, not used in this mod's strings) | einsargen | Real German verb (to put into a coffin), derived directly from Kriegssarg. The Workshop page's "weld" stays einschweißen, as in English. |
 | spacer warcaskets (VFEP research, cited in FAQ) | 'Raumfahrt-Kriegssärge' | Core `TechLevel_Spacer` = Raumfahrt; single-quoted as a cited label per the language file. |
@@ -55,7 +55,7 @@ up, re-ground against them and prefer its renderings.
   - Kriegskapsel: matches vanilla casket = Kapsel (Kryptoschlafkapsel) but loses the coffin sense and reads as a drop pod.
   - Panzersarg: strong sense, but Panzer invites a tank reading and clashes with Schulterpanzer.
   - Kampfsarg: acceptable, but Kriegs- mirrors the English "war-" and vanilla's Kriegshammer.
-  - Kriegsrüstung / Kriegshülle: lose the permanent sealed-coffin sense; Rüstung is vanilla's generic armour.
+  - Kriegsrüstung / Kriegshülle: lose the permanent sealed-coffin sense; Rüstung is vanilla's generic armor.
   - Warcasket (English loan): vanilla de translates its coined nouns (Plastahl, Sprit), so a loan would stick out.
 - Kriegssarg-Gießerei (foundry). Rejected: Kriegssargschmiede (Schmiede is vanilla's smithy); Kriegssarggießerei unhyphenated (hard to read).
 - einsargen (entomb). Rejected: einschließen (too weak), einmauern (walling in, wrong image), bestatten (burial).

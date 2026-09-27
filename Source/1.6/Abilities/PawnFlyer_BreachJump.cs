@@ -19,7 +19,7 @@ namespace ShipcrackerWarcasket;
 //    spaceFlightMaxSeconds so a map-length hop does not drag.
 //  - The extension's spaceFlightEffecter instead of flightEffecter. The two differ only in the
 //    sprayers' maxMoteCount: the jump exhaust cuts out early to suit a short hop, the burn runs
-//    to the landing. Both live on the extension so a compat root can recolour them by patch;
+//    to the landing. Both live on the extension so a compat root can recolor them by patch;
 //    the DefOf entries are the fallback for a flyer whose ability reference did not survive a
 //    reload.
 public class PawnFlyer_BreachJump : AbilityPawnFlyer

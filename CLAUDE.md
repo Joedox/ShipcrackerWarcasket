@@ -158,7 +158,7 @@ TODOs.md         - Scoping notes for the feature work that has not landed yet
   mod/DLC is absent.
 - The fix is a folder gate: ship the gated content from a compat load root, loaded via an
   `IfModActive` entry in `LoadFolders.xml` (the Odyssey pair is drafted there, commented out).
-  Two flavours, mirroring the ungated roots: `1.6/Mods/<Mod Name>/` for version-specific content
+  Two flavors, mirroring the ungated roots: `1.6/Mods/<Mod Name>/` for version-specific content
   (Defs, and the DefInjected targeting them) and root-level `Mods/<Mod Name>/` for
   version-independent content (art). The def's `MayRequire` becomes redundant and should be
   dropped when it moves. A compat art variant (VGE's purple Breach Jump icons) goes at the

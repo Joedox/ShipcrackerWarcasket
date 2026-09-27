@@ -28,7 +28,7 @@ Workshop page is never post-processed at all.
 | shipcracker warcasket / shoulders / helmet | sarcophage brise-coque / épaulières de sarcophage brise-coque / casque de sarcophage brise-coque | Core/Royalty apparel pattern `casque de cataphracte`, `armure de commando` (part `de` material/class noun). |
 | Workshop title | Sarcophage brise-coque | Sentence case, contains the VFEP term. No settings key to match. |
 | warcasket shell (torso) | carapace | **Coined.** `coque` was avoided because it is the hull (Odyssey) and sits inside the set name. |
-| pauldrons / shoulders | épaulières | **Coined** (no vanilla shoulder apparel; Core only has `épaule` body parts). Ordinary French armour term. Plural label: `[X_definite]` agreement may default masculine singular in vanilla keyed strings. |
+| pauldrons / shoulders | épaulières | **Coined** (no vanilla shoulder apparel; Core only has `épaule` body parts). Ordinary French armor term. Plural label: `[X_definite]` agreement may default masculine singular in vanilla keyed strings. |
 | helmet / sealed helm (Workshop) | casque / heaume étanche | Core `casque de commando`; `heaume` has an aspirated h (`le heaume`). |
 | spacer / spacer-tech / spacer warcasket | spatial / de sarcophage spatial | Core `TechLevel_Spacer` = `spatial`. |
 | warcasket foundry | fonderie de sarcophages | **Coined.** |

@@ -2,7 +2,7 @@
 <Defs>
   <!--
     Landing shockwave for the Breach Jump, planet and space: the explosionCenterEffecter of the
-    SCWC_Breach DamageDef, fired at the blast centre alongside that def's Bomb-style flash,
+    SCWC_Breach DamageDef, fired at the blast center alongside that def's Bomb-style flash,
     smoke and cell flecks (Biotech's mech-band stun uses the same slot). Visual only; the
     sound is the explosion's.
   -->

@@ -51,7 +51,7 @@ This mod follows that pattern so the set reads like one of VFEP's own.
 - The coined breach family (`пробивной прыжок`, `пробивной рывок`, `пробой`,
   `сила пробоя`, `пробивным ударом`) and `десантные двигатели`.
 - `пробивные манипуляторы` for "breaching arms": whether "arms" reads better as
-  mechanical manipulators or as armoured forearms.
+  mechanical manipulators or as armored forearms.
 - The research name in the Workshop FAQ: replace with the pack's actual label
   for VFEP's "spacer warcaskets" research if it differs.
 - Lore paragraphs 2 and 3 and the whole Workshop page are first-pass free prose.

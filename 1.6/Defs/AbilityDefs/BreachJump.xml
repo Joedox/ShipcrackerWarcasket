@@ -13,7 +13,7 @@
     (Aerial's works out at 0.225, a grenade's 0.75) is passed explicitly because GenExplosion
     otherwise derives it as damage x 0.015. breachRadius 2 is a 13-cell footprint: a door-sized
     hole in the wall it lands beside (vanilla's explosion also hits walls adjacent to the open
-    cells it reaches) rather than a levelled room. Wearer excluded; allies are not, as with
+    cells it reaches) rather than a leveled room. Wearer excluded; allies are not, as with
     Aerial. roofPunchRadius 1 keeps the ceiling hole tighter than the wall hole; in
     space that vents the gravship room the wearer leaves or breaches into.
 
@@ -33,7 +33,7 @@
     (Mods/VanillaGravshipExpanded/Textures/) shadows both with purple copies at the same
     paths; keep the filenames in step.
 
-    flightEffecter / spaceFlightEffecter are on the extension so a compat root can recolour
+    flightEffecter / spaceFlightEffecter are on the extension so a compat root can recolor
     them by patch; see EffecterDefs/BreachJumpFlame.xml and BreachBurnFlame.xml.
 
     thrusterGlowCurve maps cast progress (0 at the click, 1 at launch) to the opacity of the

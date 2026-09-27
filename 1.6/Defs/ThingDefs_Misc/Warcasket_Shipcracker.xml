@@ -26,14 +26,14 @@
       functionality is priced here rather than in the base costList.
 
     Abilities: VEF CompAbilitiesApparel grants SCWC_BreachJump (AbilityDefs/BreachJump.xml),
-    fuelled by the CompApparelReloadable beside it (Aerial's 100-charge chemfuel tank). The
+    fueled by the CompApparelReloadable beside it (Aerial's 100-charge chemfuel tank). The
     ability reads the tank off the apparel that grants it, so both comps must sit on this one
     def, which is why the engine is here and not on the shoulders as on Aerial.
     SCWC_BreachJumpRange +20 is the set's whole planet-side range (StatDefs/BreachJumpRange.xml).
 
     apparel tags: WarcasketVeteran (VFEP's 10th-gen tag) puts the set on the veteran raid
     pawnkinds of both VFEP factions and Odyssey's VFEP_Salvager_Warcasket; WarcasketAll is
-    VFEP_General. Threat and flavour only: AI pawns never cast apparel abilities and warcasket
+    VFEP_General. Threat and flavor only: AI pawns never cast apparel abilities and warcasket
     parts are destroyed on drop and untradeable, so the foundry is the only source.
 
     Compat patches reach this def from 1.6/Patches/SOS2Patch.xml (EVA tag, cold insulation) and
@@ -42,7 +42,7 @@
 
     renderNodeProperties: the thruster-glow node (Source/1.6/Rendering/, alpha from the
     ability's thrusterGlowCurve). The art is desaturated and color tints it chemfuel orange,
-    between the core and fringe of the VFEP_JumpFlame flecks; the VGE root recolours it purple.
+    between the core and fringe of the VFEP_JumpFlame flecks; the VGE root recolors it purple.
     TransparentPostLight so it reads at night. parentTagDef ApparelBody puts it beside the
     armor's own node; baseLayer is only the fallback when that node is absent.
 

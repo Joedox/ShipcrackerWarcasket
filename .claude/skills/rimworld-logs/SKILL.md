@@ -1,6 +1,6 @@
 ---
 name: rimworld-logs
-description: Find and read RimWorld's Player.log, or disassemble the RimWorld API to inspect vanilla types and method signatures. Use when debugging runtime behaviour, chasing an exception, or checking what a vanilla method actually does.
+description: Find and read RimWorld's Player.log, or disassemble the RimWorld API to inspect vanilla types and method signatures. Use when debugging runtime behavior, chasing an exception, or checking what a vanilla method actually does.
 ---
 
 # RimWorld Logs and API Inspection

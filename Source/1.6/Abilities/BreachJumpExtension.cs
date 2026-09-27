@@ -41,7 +41,7 @@ public class BreachJumpExtension : DefModExtension
     // as a curve of cast progress 0..1 to alpha 0..1; the flight then holds alpha 1 and there
     // is no fade-out. Null uses progress directly. Set in XML so it can be retuned without a
     // rebuild; the tint lives on the render node entry in the armor def, where a compat root
-    // can recolour it.
+    // can recolor it.
     public SimpleCurve thrusterGlowCurve;
 
     // Gizmo icon shown while the wearer stands on a space map; null keeps the def's iconPath.
@@ -56,7 +56,7 @@ public class BreachJumpExtension : DefModExtension
     [MustTranslate] public string vacuumDescription;
 
     // Gizmo label and tooltip title while the wearer stands on a space map, lowercase like a
-    // def label (the ability class capitalises it). Same one-def, two-state pattern as VFEP's
+    // def label (the ability class capitalizes it). Same one-def, two-state pattern as VFEP's
     // grappling hook and its labelUnloaded. Null or empty keeps the def's label everywhere.
     [MustTranslate] public string vacuumLabel;
 

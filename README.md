@@ -10,7 +10,7 @@
 ## About
 
 Vanilla Factions Expanded - Pirates lets you weld a pawn into a warcasket: a steel shell,
-customised part by part at the foundry, with a range of sets that carries a colony from the
+customized part by part at the foundry, with a range of sets that carries a colony from the
 industrial era into the late game. This mod adds one more set to that range: the Shipcracker, a
 boarding suit whose armor carries drop thrusters that throw the wearer over walls and land hard
 enough to punch through them. In orbit the same thrusters become a long-range burn straight into
@@ -33,7 +33,7 @@ Pirates' Brute and Guardian and priced a little under them.
 - **Helmet**: the sealed helm. A built-in respirator keeps breathing at full capacity, plus a
   small aiming speed bonus
 - **With Odyssey** the full set is fully vacuum rated, and the thrusters cost gravlite panels
-- **Built on VFE Pirates** rather than beside it: the foundry, entombing, customisation and
+- **Built on VFE Pirates** rather than beside it: the foundry, entombing, customization and
   removal surgery all apply unchanged, and the pieces mix and match with VFE Pirates' own sets
 
 ### Breach Jump
