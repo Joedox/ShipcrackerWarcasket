@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Space-flight exhaust (the "breach burn") for the Breach Jump: the orange chemfuel flame,
-    named by the ability extension's spaceFlightEffecter. VFEP's VFEP_BlastOffEffect (Shock's
-    Blast Off) child for child, on VFEP's own flecks, sound and smoke, with the sprayers'
-    positionOffset raised from VFEP's -0.5 to -0.05 so the flecks leave the thruster outlets at
-    mid-back (see BreachJumpFlame.xml). Differs from SCWC_BreachJumpFlame only in the sprayers'
-    maxMoteCount (1000 vs 28 and 16), so the flame burns to the landing of a multi-second space
-    run instead of cutting out (see PawnFlyer_BreachJump). The Vanilla Gravship Expanded root's
-    SCWC_BreachBurnAstroflame is this def with purple flecks; keep the two in step.
-
-    The three continuous sprayers below are ShipcrackerWarcasket.ExhaustSprayerDef, whose
-    SubEffecter_ExhaustSprayer sprays fleckDefNorth (a copy of fleckDef raised to the PawnState
-    altitude layer) instead of fleckDef while the flying wearer faces north, so the exhaust
-    trail draws over the wearer's back when the outlets face the camera and under them
-    otherwise.
+    Space-flight exhaust for the breach burn (the extension's spaceFlightEffecter), after VFEP's
+    VFEP_BlastOffEffect (Shock's Blast Off). SCWC_BreachJumpFlame (see its header) with the
+    sprayers' maxMoteCount at 1000 instead of 28 and 16, so the flame burns to the landing of
+    a multi-second space flight. Keep in step with it and the VGE root's purple
+    SCWC_BreachBurnAstroflame.
   -->
   <EffecterDef>
     <defName>SCWC_BreachBurnFlame</defName>

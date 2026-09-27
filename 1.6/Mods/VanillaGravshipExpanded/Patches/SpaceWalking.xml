@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-  Space walking for the Shipcracker armor under Vanilla Gravship Expanded.
+  Space walking for the Shipcracker armor under Vanilla Gravship Expanded. Odyssey's Space
+  terrain is Impassable; VGE1 makes it Standable at pathCost 490 for everyone, so the suit
+  only makes the crawl bearable. VEF's ApparelExtension.moveSpeedFactorByTerrainTag divides
+  the whole per-cell cost (ticks per move plus the terrain's 490) by the factor, before the
+  450 clamp, on cells whose TerrainDef.tags hold the key (Odyssey tags Space "Space"). VGE2's
+  astrorig uses 27.5.
 
-  Stock Odyssey marks the Space terrain Impassable. VGE1's SpaceTraversal.xml makes
-  it Standable at pathCost 490 for every pawn, so the suit does not unlock space
-  walking; it makes the crawl bearable. The speed knob is VEF's
-  ApparelExtension.moveSpeedFactorByTerrainTag: its transpiler in
-  Pawn_PathFollower.CostToMoveIntoCell divides the whole per-cell tick cost
-  (the wearer's ticks per move plus the terrain's 490) by the factor, before the
-  450 clamp, whenever the cell's TerrainDef.tags holds the key (Odyssey tags Space
-  with "Space"). The dedicated pack is VGE2's astrorig (VGE_Apparel_Astrorig,
-  factor 27.5), not a VGE1 item; the mechanism is VEF's and VGE1 alone makes it
-  meaningful, which is why this patch sits in the VGE1 root and the main tree
-  carries nothing.
+  Factor 19: at the 4.6 c/s baseline (13 ticks per move), (13 + 490) / 19 = 26.5 ticks per
+  cell, about half walking speed and a clear step below the astrorig's 18.3 (about 70
+  percent). Unaided the cell costs the clamped 450.
 
-  Factor 19: for a wearer at the 4.6 c/s baseline (13 ticks per move),
-  (13 + 490) / 19 = 26.5 ticks per cell, about half walking speed in open space
-  and a clear step below the astrorig's (13 + 490) / 27.5 = 18.3 (about 70
-  percent). Unaided, the same cell costs the clamped 450 ticks.
-
-  Appended to the armor's existing ApparelExtension (the one holding the trait swap
-  and capacity floors). That entry carries priority 1 for a reason that decides
-  whether this field exists at all: VFEP's armor base has its own ApparelExtension,
-  VEF merges the two at resolve time and its Merge drops this one field, so the
-  factor only survives on the entry that wins the merge. See the armor def's header.
+  Appended to the armor's existing ApparelExtension, whose priority 1 is what keeps this
+  field alive through VEF's extension merge; see the armor def's header.
 -->
 <Patch>
   <Operation Class="PatchOperationAdd">

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    VFEP's VFEP_JumpFlame raised to PawnState (the layer vanilla uses for motes held over a
-    pawn) so the exhaust draws over the wearer's back while they fly facing north; a fleck's
-    altitude comes only from its def, so a separate def is needed. Sprayed as fleckDefNorth by
-    SubEffecter_ExhaustSprayer. A full copy because VFEP's def has no Name attribute to inherit
-    from; keep in step with it.
+    VFEP's VFEP_JumpFlame raised to PawnState, sprayed as fleckDefNorth by
+    SubEffecter_ExhaustSprayer so the exhaust draws over the wearer's back while flying north;
+    a fleck's altitude comes only from its def. A full copy because VFEP's def has no Name
+    to inherit from; keep in step.
   -->
   <FleckDef ParentName="FleckBase_Thrown">
     <defName>SCWC_JumpFlameNorth</defName>

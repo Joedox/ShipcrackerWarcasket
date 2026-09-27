@@ -1,96 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Templated from VFEP's VFEP_Warcasket_Siegebreaker (VFEPirates.WarcasketDef,
-    ParentName="VFEP_WarcasketArmorBase") at VFEP commit e237aba,
-    1.6/Defs/ThingDefs_Misc/Apparel_Various.xml. Everything not listed under "Tuning" below is
-    still a verbatim Siegebreaker copy (placeholder, per TODOs.md), the VFEP_SpacerWarcaskets
-    research prereq included.
+    Templated from VFEP's VFEP_Warcasket_Siegebreaker (VFEP commit e237aba,
+    1.6/Defs/ThingDefs_Misc/Apparel_Various.xml); fields not discussed here are Siegebreaker's,
+    VFEP_SpacerWarcaskets research prereq included.
 
-    Tuning. VFEP reference numbers are the 10th-generation sets (Siegebreaker, Guardian,
-    Controller, Sarcophagus, Brute) at the commit above. The set is a close-combat suit and is
-    pitched at Brute and Guardian effectiveness, priced a little under them:
-    - ArmorRating_Blunt 1.5 (Brute and Guardian; the other three 1.0): the close-combat plating,
-      carried by all three pieces so the set reads as one tier, the Guardian pattern. Sharp 2
-      and Heat 1 are the shared spacer values.
-    - EnergyShieldEnergyMax 2.5 (Siegebreaker 2.5; Guardian, Controller and Sarcophagus 1.5;
-      Brute 5.0): the bubble blocks ranged fire only, exactly what a melee suit needs while
-      closing. EnergyShieldRechargeRate stays at the shared 0.01.
+    Tuning. Reference numbers are VFEP's 10th-generation sets (Siegebreaker, Guardian,
+    Controller, Sarcophagus, Brute). A close-combat suit pitched at Brute and Guardian
+    effectiveness, priced a little under them:
+    - ArmorRating_Blunt 1.5 (Brute and Guardian; the other three 1.0) on all three pieces, the
+      Guardian pattern. Sharp 2 and Heat 1 are the shared spacer values.
+    - EnergyShieldEnergyMax 2.5 (Siegebreaker 2.5; Guardian, Controller, Sarcophagus 1.5;
+      Brute 5.0): the bubble blocks ranged fire only, what a melee suit needs while closing.
     - costList ComponentSpacer 6 / Plasteel 180 / Uranium 50 (Siegebreaker 6 / 145 / 50,
-      Guardian 6 / 200 / 50). VFEP uses the spacer-component count as a tech-complexity dial
-      (Controller 12 for mech control, the utility sets 6, Brute 4); a fuel-burning drop
-      thruster is Aerial-tier tech, so 6 fits the utility-set tier and the plating step is
-      priced onto plasteel instead. At vanilla market values (plasteel 9, spacer component 200,
-      uranium 6) the full set welds for about 4780 silver without Odyssey: Siegebreaker 4195,
-      Sarcophagus 4785, Guardian 5164, Brute 5220. The shoulders and helmet scale with the armor
-      at the ratios the 10th-gen sets use between their pieces; see their headers for the
-      arithmetic.
+      Guardian 6 / 200 / 50). VFEP uses the component count as a tech-complexity dial
+      (Controller 12, the utility sets 6, Brute 4); a drop thruster is Aerial-tier tech, so 6,
+      with the plating step priced onto plasteel. At market value (plasteel 9, component 200,
+      uranium 6) the full set is about 4780 silver without Odyssey: Siegebreaker 4195,
+      Sarcophagus 4785, Guardian 5164, Brute 5220. The shoulders and helmet scale at the
+      10th-gen piece ratios; see their headers.
+    - costList GravlitePanel 30 under Odyssey (10 each on the shoulders and helmet; cf. VGE2's
+      combat vacsuit 20/10 split): the thrusters and the space flight are gravtech and live on
+      this piece. A panel is market value 4 but needs vacstone, which only comes from space,
+      so the 50-panel set total is a been-to-orbit gate rather than a silver one, and the space
+      functionality is priced here rather than in the base costList.
 
-    SOS2/Universum parity: VFEP's 1.6/Patches/SOS2Patch.xml matches its own warcasket
-    armor/helmet defs by an explicit defName list, so it never reaches this mod's defs. Our
-    1.6/Patches/SOS2Patch.xml applies the same EVA tag and Insulation_Cold override to this def
-    and the helmet; see its header.
+    Abilities: VEF CompAbilitiesApparel grants SCWC_BreachJump (AbilityDefs/BreachJump.xml),
+    fuelled by the CompApparelReloadable beside it (Aerial's 100-charge chemfuel tank). The
+    ability reads the tank off the apparel that grants it, so both comps must sit on this one
+    def, which is why the engine is here and not on the shoulders as on Aerial.
+    SCWC_BreachJumpRange +20 is the set's whole planet-side range (StatDefs/BreachJumpRange.xml).
 
-    Vanilla Gravship Expanded parity: VGE1's ArmorVacuumResistancePatch.xml lowers the five VFEP
-    spacer warcasket armors to VacuumResistance 0.22 (helmets 0.65) by defName, so a full set
-    needs an oxygen source; it never reaches this def. Our
-    1.6/Mods/VanillaGravshipExpanded/Patches/VacuumResistance.xml (gated on VGE1's package id in
-    LoadFolders.xml) applies the same 0.22 here; see its header. Without VGE1 the 0.2 below
-    stands.
+    apparel tags: WarcasketVeteran (VFEP's 10th-gen tag) puts the set on the veteran raid
+    pawnkinds of both VFEP factions and Odyssey's VFEP_Salvager_Warcasket; WarcasketAll is
+    VFEP_General. Threat and flavour only: AI pawns never cast apparel abilities and warcasket
+    parts are destroyed on drop and untradeable, so the foundry is the only source.
 
-    Abilities: the armor is the drop engine.
-    - Breach Jump: VEF CompAbilitiesApparel grants SCWC_BreachJump (rules and numbers in
-      1.6/Defs/AbilityDefs/BreachJump.xml and Source/1.6/Abilities/), fuelled by the
-      CompApparelReloadable beside it (100 charges of chemfuel at 1 per charge, 60-tick reload,
-      20 per jump; Aerial's tank). The ability reads the tank off the apparel that holds it, so
-      both comps must sit on this one def, which is why the engine is here and not on the
-      shoulders as on Aerial.
-    - SCWC_BreachJumpRange +20: the set's whole planet-side range (the shoulders and helmet add
-      none; VFEP's Aerial shoulders and helmet add 5 and 10 via Patches/AerialJumpRange.xml;
-      Aerial's full set reaches 40). In space the jump has no range limit and requires line of
-      sight instead.
-    - Space walking and the astrofuel swap under Vanilla Gravship Expanded come from
-      1.6/Mods/VanillaGravshipExpanded/Patches/; stock Odyssey space terrain is impassable, so
-      the main tree carries neither.
-    - costList GravlitePanel 30 under Odyssey (MayRequire on the cost item, as Core's
-      Buildings_Exotic.xml does for ShuttleEngine): the drop thrusters are gravtech. The
-      shoulders and helmet take 10 each; the armor's larger 30 reflects that the thrusters and
-      the unlimited-range space flight are its (cf. VGE2's combat vacsuit 20/10 split). A panel
-      is market value 4 but costs 1 plasteel, 5 vacstone blocks and 1800 work (Odyssey's
-      Items_Resource_Misc.xml), and vacstone only comes from space, so the 50-panel set total is
-      the Odyssey premium: a been-to-orbit gate rather than a silver one, which is why the extra
-      space functionality is priced here and not in the base costList.
+    Compat patches reach this def from 1.6/Patches/SOS2Patch.xml (EVA tag, cold insulation) and
+    the 1.6/Mods/VanillaGravshipExpanded/Patches/ root (vacuum resistance, space walking,
+    astrofuel); see their headers.
 
-    apparel tags: WarcasketVeteran, the tag VFEP's 10th-generation sets carry, puts the set on
-    the veteran-tier raid pawnkinds of both VFEP factions and Odyssey's VFEP_Salvager_Warcasket;
-    WarcasketAll is VFEP_General, the faction leader. Raid presence is threat and flavour only:
-    AI pawns never cast apparel abilities, warcasket parts are destroyed on drop, and the base
-    def is untradeable, so the foundry stays the only way to obtain one. VFEP's pawn generator
-    also fills empty warcasket slots from every WarcasketDef regardless of tags.
+    renderNodeProperties: the thruster-glow node (Source/1.6/Rendering/, alpha from the
+    ability's thrusterGlowCurve). The art is desaturated and color tints it chemfuel orange,
+    between the core and fringe of the VFEP_JumpFlame flecks; the VGE root recolours it purple.
+    TransparentPostLight so it reads at night. parentTagDef ApparelBody puts it beside the
+    armor's own node; baseLayer is only the fallback when that node is absent.
 
-    Art: Things/Pawn/Warcasketlike/WarcasketShipcracker/WarcasketShipcracker (+
-    _north/_east/_south), 256x256 RGBA under the root Textures/ folder, mirroring VFEP's own
-    warcasket layout.
-
-    apparel.renderNodeProperties adds the thruster-glow render node: the desaturated
-    WarcasketShipcrackerThrusterGlow overlays (same canvas and facings as the armor art) drawn
-    over the worn texture at an alpha that follows the Breach Jump's cast and flight
-    (Source/1.6/Rendering/, thrusterGlowCurve in AbilityDefs/BreachJump.xml). color is the tint
-    the grey art is multiplied by: chemfuel orange, between the yellow-white core and orange
-    fringe of the VFEP_JumpFlame flecks it feeds; the Vanilla Gravship Expanded root's
-    Patches/BreachJumpAstrofuel.xml swaps it to astrofuel purple, so the art must stay
-    desaturated. TransparentPostLight draws after the light pass so the glow reads at night.
-    parentTagDef ApparelBody puts the node beside the armor's own; baseLayer is only the
-    fallback for a tree where that node is absent.
-
-    ApparelExtension priority 1: VFEP_WarcasketArmorBase carries its own
-    VEF.Apparels.ApparelExtension and def inheritance appends list items, so this def resolves
-    with two. VEF merges duplicate IMergeable extensions in a Def.ResolveReferences prefix,
-    sorted by priority, first survives, the rest merge into it, and ApparelExtension.Merge does
-    not copy moveSpeedFactorByTerrainTag. With equal priorities the parent's copy wins and the
-    Vanilla Gravship Expanded space-walking factor is silently dropped; at priority 1 ours
-    survives and every field of ours, from any load root, is kept. The helmet and shoulders
-    carry the same guard.
+    ApparelExtension priority 1: VFEP_WarcasketArmorBase carries its own ApparelExtension and
+    inheritance appends list items, so this def resolves with two. VEF merges duplicate
+    extensions in a Def.ResolveReferences prefix, highest priority surviving, and
+    ApparelExtension.Merge does not copy moveSpeedFactorByTerrainTag; at equal priority the
+    parent's copy would win and drop VGE's space-walking factor. At priority 1 every field of
+    ours, from any load root, is kept. The helmet and shoulders carry the same guard.
   -->
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>SCWC_Warcasket_Shipcracker</defName>

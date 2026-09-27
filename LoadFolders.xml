@@ -2,46 +2,24 @@
 <loadFolders>
   <v1.6>
     <li>/</li>
-    <!-- Once a LoadFolders.xml exists, ONLY the folders listed here load - the
-         game's default roots (version folder, Common, /) no longer apply.
-         Version-independent content (art) sits directly under the mod root, so
-         "/" covers it; this mod family does not use a Common/ root. -->
+    <!-- With a LoadFolders.xml only the folders listed here load. Art sits under the mod
+         root, so "/" covers it; there is no Common/ root. -->
     <li>1.6</li>
-    <!-- Optional-mod/DLC compat roots, one gated entry each (the layout the wider
-         ecosystem uses). Needed whenever content can't gate itself: defs support
-         MayRequire, but DefInjected entries do not (the loader ignores attributes
-         on them) and textures have no node to carry one at all, so the load root
-         *is* the gate. Gating is by package id via IfModActive (LoadFolders knows
-         nothing about MayRequire, and unlike PatchOperationFindMod it matches the
-         package id rather than the display name).
+    <!-- Optional-mod/DLC compat roots, gated by package id via IfModActive: DefInjected
+         entries and textures cannot carry MayRequire, so the load root is the gate.
+         Mods/<Mod Name>/ holds version-independent content (art), 1.6/Mods/<Mod Name>/ the
+         Defs, Patches and the DefInjected that must share their root. The game only scans
+         well-known folders (Defs/, Languages/, Textures/, ...) directly under a load root,
+         so "/" and 1.6 never see Mods/.
 
-         Two roots per optional mod, mirroring how the ungated roots above split:
-         Mods/<Mod Name>/ for version-independent content (art) and
-         1.6/Mods/<Mod Name>/ for version-specific content (Defs, and the
-         DefInjected that must sit in the same load root as the defs it targets).
-         Both are safe to nest, because the game only scans well-known folders
-         (Languages/, Defs/, Textures/, ...) directly under a load root - so the
-         plain "/" and 1.6 entries above never see Mods/. ModLister also
-         scans the game's Mods folder one level deep only, so a nested Mods/
-         inside a deployed mod is never mistaken for a mod.
-
-         Odyssey is this mod's planned optional gate (the set targets Odyssey's
-         end-game content but must not require the DLC). Uncomment when the first
-         Odyssey-only def, injection or texture lands:
+         Odyssey gate, for when the first Odyssey-only def, injection or texture lands:
     <li IfModActive="ludeon.rimworld.odyssey">Mods/Odyssey</li>
     <li IfModActive="ludeon.rimworld.odyssey">1.6/Mods/Odyssey</li>
     -->
-    <!-- Vanilla Gravship Expanded (chapter 1): mirrors its vacuum-resistance nerf
-         onto our armor and helmet, gives the helmet VGE1's oxygen-provider comp,
-         lets the armor walk on VGE1's walkable space terrain and switches the jump
-         tank to astrofuel and its flight exhaust to purple (see that root's
-         Patches/ and Defs/). The purple exhaust flecks use VGE's own art by path.
-
-         The Mods/ root carries purple-flame copies of the Breach Jump gizmo icons
-         at the main tree's texture paths. The game lists load folders last-first
-         and keeps the first file it finds per relative path, so an entry listed
-         after "/" replaces a same-path texture there without a patch (the same
-         rule that lets 1.6 override "/"). It must stay below the "/" entry. -->
+    <!-- Vanilla Gravship Expanded (chapter 1): vacuum parity, helmet oxygen, space walking,
+         astrofuel and purple exhaust (see that root's Patches/ and Defs/). The Mods/ root
+         carries purple copies of the gizmo icons at the main tree's paths; a later load
+         folder wins a shared relative path, so it must stay below "/". -->
     <li IfModActive="vanillaexpanded.gravship">Mods/VanillaGravshipExpanded</li>
     <li IfModActive="vanillaexpanded.gravship">1.6/Mods/VanillaGravshipExpanded</li>
   </v1.6>

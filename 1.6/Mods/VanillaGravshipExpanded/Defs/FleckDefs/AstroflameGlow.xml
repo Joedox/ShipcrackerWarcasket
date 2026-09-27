@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Additive glow layered under SCWC_Astroflame, as VFEP_JumpFlameGlow is under its flame:
-    same texture through MoteGlow, no solid time, 0.3 s fade, shrinking at -3. VFEP tints the
-    orange texture pink at 0.3 alpha; here the texture is already purple, so the tint stays
-    near white with a little extra blue and the same alpha. See Astroflame.xml for the
-    texture and sizing rationale.
-
-    Also the parent of SCWC_AstroflameGlowNorth (AstroflameGlowNorth.xml), which inherits
-    everything here and only moves the altitude up to PawnState for when the wearer faces north.
+    Additive glow under SCWC_Astroflame, as VFEP_JumpFlameGlow is under its flame: same
+    texture through MoteGlow, no solid time, 0.3 s fade, growth -3. VFEP tints its orange
+    texture pink at 0.3 alpha; this texture is already purple, so the tint stays near white
+    with a little blue at the same alpha. Parent of SCWC_AstroflameGlowNorth.
   -->
   <FleckDef Name="SCWC_AstroflameGlow" ParentName="FleckBase_Thrown">
     <defName>SCWC_AstroflameGlow</defName>

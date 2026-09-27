@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
   <!--
-    Aerial jump hardware extends the Breach Jump.
-    VFEP's Aerial shoulders and helmet carry VFEP_PowerJumpRange offsets (+5 and +10) that
-    only the Aerial set's own Power Jump reads, so at the foundry an Aerial helmet or pauldron
-    on a Shipcracker armor added nothing to its jump. This mirrors those two offsets onto
-    SCWC_BreachJumpRange, the stat Ability_BreachJump reads, so the shoulder thrusters and the
-    helmet's jump telemetry (VFEP's own description of the piece) work on either engine. With
-    both the breach jump reaches 35, still under Aerial's own 40. The reverse is deliberately
-    absent: breaching arms and a respirator are not jump hardware, and the set's range lives
-    on the armor (see StatDefs/BreachJumpRange.xml).
-    Both xpaths match on the VFEP_PowerJumpRange leaf these defs declare directly, so the
-    patch is independent of VFEP's abstract bases. Vanilla equippedStatOffsets add across
-    worn pieces; no C# and no DefInjected point is involved.
+    VFEP's Aerial shoulders and helmet carry VFEP_PowerJumpRange offsets (+5 and +10) that only
+    the Aerial Power Jump reads. This mirrors them onto SCWC_BreachJumpRange, so at the foundry
+    Aerial jump hardware extends the Breach Jump too: 35 with both, still under Aerial's own
+    40. No reverse patch: breaching arms and a respirator are not jump hardware. The xpaths
+    match the leaf these defs declare directly, so the patch is independent of VFEP's bases.
   -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/VFEPirates.WarcasketDef[defName = "VFEP_WarcasketShoulders_Aerial"]/equippedStatOffsets</xpath>

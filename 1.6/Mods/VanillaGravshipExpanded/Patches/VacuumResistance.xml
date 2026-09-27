@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-  Vanilla Gravship Expanded (chapter 1) parity for vacuum resistance.
-
-  VGE1's 1.6/Patches/ArmorVacuumResistancePatch.xml lowers every vacuum-rated
-  suit so that no armor + helmet pair reaches VacuumResistance 1.0 without an
-  oxygen source (its astrorig / oxygen packs), and it covers the five VFEP
-  spacer warcasket sets by an explicit defName list: armor 0.2 to 0.22, helmet
-  0.7 to 0.65, shoulders left at 0.1, so a full set totals 0.97. That list never
-  reaches this mod's defs, so with VGE1 active the Shipcracker set would be the
-  only warcasket at a full 1.0. This patch mirrors the same two numbers onto our
-  armor and helmet; the shoulders stay at 0.1, exactly as VGE1 leaves VFEP's.
-
-  Loaded only from the IfModActive="vanillaexpanded.gravship" root in
-  LoadFolders.xml (package-id gate; VGE1 hard-requires Odyssey, so the
-  VacuumResistance stat always exists here). The MayRequire attribute on the
-  replacement nodes is kept only to match the source defs; it is redundant
-  behind this gate.
+  Vanilla Gravship Expanded (chapter 1) parity for vacuum resistance. VGE1's
+  ArmorVacuumResistancePatch.xml lowers vacuum-rated suits so no armor and helmet reach 1.0
+  without an oxygen source, and covers VFEP's five spacer warcaskets by defName: armor 0.22,
+  helmet 0.65, shoulders left at 0.1, a 0.97 set. This mirrors the armor and helmet numbers
+  onto ours so the Shipcracker is not the one warcasket at 1.0. VGE1 requires Odyssey, so
+  the stat always exists here; MayRequire on the values only matches the source defs.
 -->
 <Patch>
   <Operation Class="PatchOperationReplace">

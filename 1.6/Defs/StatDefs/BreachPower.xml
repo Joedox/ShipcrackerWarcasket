@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Pawn-level multiplier on the structural damage of a Breach Jump landing, read by
-    DamageWorker_Breach for buildings only. Base 1. Contributions: shoulders +0.5, so with them
-    on a landing deals 900 to a wall cell, enough for plasteel (840) and uranium (750), and 225
-    to passable buildings; pawns take the same 20 either way. See DamageDefs/Breach.xml for the
-    base numbers.
+    Pawn-level multiplier on a Breach Jump landing's structural damage, read by
+    DamageWorker_Breach for buildings only. Base 1; the shoulders add 0.5 (900 to a wall cell,
+    225 to passable buildings). Base numbers in DamageDefs/Breach.xml.
   -->
   <StatDef>
     <defName>SCWC_BreachPower</defName>

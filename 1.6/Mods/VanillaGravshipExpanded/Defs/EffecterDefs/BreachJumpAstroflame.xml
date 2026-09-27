@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Planet-flight exhaust for the Breach Jump under Vanilla Gravship Expanded, where the tank
-    burns astrofuel: the main tree's SCWC_BreachJumpFlame (1.6/Defs/EffecterDefs/, itself
-    VFEP's Aerial Power Jump effect with the mid-back origin and the 28-tick flame) child for
-    child, with the two flame sprayers pointed at the purple SCWC_Astroflame pair and the
-    launch ShotFlash tinted to match. Wired in by the root's BreachJumpAstrofuel.xml patch,
-    which sets the ability extension's flightEffecter. Keep in step with the orange def.
-
-    The three continuous sprayers below are ShipcrackerWarcasket.ExhaustSprayerDef, whose
-    SubEffecter_ExhaustSprayer sprays fleckDefNorth (a copy of fleckDef raised to the PawnState
-    altitude layer) instead of fleckDef while the flying wearer faces north, so the exhaust
-    trail draws over the wearer's back when the outlets face the camera and under them
-    otherwise.
+    Planet-flight exhaust under Vanilla Gravship Expanded, where the tank burns astrofuel: the
+    main tree's SCWC_BreachJumpFlame child for child, with the flame sprayers on the purple
+    SCWC_Astroflame pair and the launch ShotFlash tinted to match. Set as the extension's
+    flightEffecter by this root's BreachJumpAstrofuel.xml. Keep in step with the orange def.
   -->
   <EffecterDef>
     <defName>SCWC_BreachJumpAstroflame</defName>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    SCWC_Astroflame raised to PawnState so the purple exhaust draws over the wearer's back
-    while they fly facing north; sprayed as fleckDefNorth by SubEffecter_ExhaustSprayer. See
-    the main tree's JumpFlameNorth.xml for the layer choice.
+    SCWC_Astroflame raised to PawnState for the north-facing flight; see the main tree's
+    JumpFlameNorth.xml.
   -->
   <FleckDef ParentName="SCWC_Astroflame">
     <defName>SCWC_AstroflameNorth</defName>

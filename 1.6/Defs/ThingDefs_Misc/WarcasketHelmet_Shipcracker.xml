@@ -1,54 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Templated from VFEP's VFEP_WarcasketHelmet_Siegebreaker (VFEPirates.WarcasketDef,
-    ParentName="VFEP_WarcasketHelmetBase") at VFEP commit e237aba,
-    1.6/Defs/ThingDefs_Misc/Apparel_Headgear.xml. Everything not listed under "Tuning" below,
-    uiIconScale included, is still a verbatim Siegebreaker copy (placeholder, per TODOs.md).
-    The apparel tags follow the armor's header.
+    Templated from VFEP's VFEP_WarcasketHelmet_Siegebreaker (VFEP commit e237aba,
+    1.6/Defs/ThingDefs_Misc/Apparel_Headgear.xml); fields not discussed here, uiIconScale
+    included, are Siegebreaker's. Tags, blunt plating (the Guardian helmet's 1.5) and the
+    Odyssey GravlitePanel split follow the armor's header.
 
-    Tuning: costList ComponentSpacer 2 / Plasteel 70 (Siegebreaker 2 / 50, Guardian 2 / 70)
-    follows the armor's 6 components / 180 plasteel at the helmet-to-armor ratios the 10th-gen
-    sets use: components one third of the armor's (Siegebreaker, Guardian and Sarcophagus 2:6,
-    Controller 4:12) and plasteel roughly 0.35 to 0.4 (Siegebreaker 50/145, Guardian 70/200,
-    Controller 60/150, Sarcophagus 60/145; 180 x 0.35 to 0.4 is 63 to 72). Rounded up to the
-    Guardian helmet's 70 rather than down to the 60 norm because this piece carries the
-    Guardian helmet's plating plus a respirator and an aiming assist, so it must not also be
-    the cheaper of the two at the foundry. ArmorRating_Blunt 1.5 is the Guardian helmet's value;
-    see the armor's header for the set-wide close-combat plating rationale.
+    Tuning: ComponentSpacer 2 / Plasteel 70 (Siegebreaker 2 / 50, Guardian 2 / 70) at the
+    10th-gen helmet-to-armor ratios: components a third of the armor's (2:6, Controller 4:12),
+    plasteel 0.35 to 0.4 (Siegebreaker 50/145, Guardian 70/200, Controller 60/150, Sarcophagus
+    60/145), 63 to 72 of the armor's 180. Rounded up to the Guardian helmet's 70 because this
+    piece carries that helmet's plating plus a respirator and an aiming assist, so it must not
+    also be the cheaper of the two.
 
     Abilities, the sealed helm:
-    - pawnCapacityMinLevels Breathing 1.0 through VEF's ApparelExtension: a built-in respirator,
-      the Sarcophagus helmet's pattern for one capacity only.
-    - equippedStatFactors AimingDelayFactor x0.95: a small ranged buff so the helmet earns its
-      place without Odyssey (the set's melee lean sits on the shoulders). Kept small because the
-      foundry lets any spacer armor take this helmet, and no VFEP helmet offers a ranged factor
-      at all; VEF multiplies same-stat factors across worn pieces.
-    - No jump-range contribution; see the armor's header.
-    - Under Odyssey alone the set already totals VacuumResistance 1.0 (0.2 + 0.1 + 0.7). Under
-      Vanilla Gravship Expanded the compat root lowers this piece to 0.65 (set 0.97) and gives
-      it VGE1's oxygen-provider comp, so the helmet itself restores full immunity while its
-      oxygen lasts, no astrorig or pack needed; see
-      1.6/Mods/VanillaGravshipExpanded/Patches/HelmetOxygen.xml.
-    - costList GravlitePanel 10 under Odyssey; see the armor's header for the split.
+    - Breathing floor 1.0 through the ApparelExtension: a built-in respirator, the Sarcophagus
+      helmet's pattern for one capacity.
+    - AimingDelayFactor x0.95: a small ranged buff so the helmet earns its place without
+      Odyssey (the melee lean sits on the shoulders). Small because any spacer armor can take
+      this helmet, no VFEP helmet has a ranged factor, and VEF multiplies same-stat factors
+      across worn pieces.
+    - VacuumResistance 0.7 brings the set to 1.0 under Odyssey (0.2 + 0.1 + 0.7). The VGE root
+      lowers it to VGE1's warcasket-helmet 0.65 (set 0.97) and gives the helmet an oxygen
+      supply that restores full immunity while it lasts (Patches/HelmetOxygen.xml there).
+    - SOS2Patch.xml gives it the EVA tag and Insulation_Cold 100 alongside the armor.
 
-    SOS2/Universum parity: covered by our 1.6/Patches/SOS2Patch.xml alongside the armor (EVA tag
-    + Insulation_Cold 100), mirroring what VFEP's own patch does for its helmets; see that
-    file's header.
-
-    Vanilla Gravship Expanded parity: our
-    1.6/Mods/VanillaGravshipExpanded/Patches/VacuumResistance.xml lowers the 0.7 below to 0.65
-    when VGE1 is active, the value VGE1 gives every VFEP spacer warcasket helmet; see the
-    armor's header and that patch.
-
-    Art: Things/Pawn/Warcasketlike/WarcasketShipcracker/WarcasketShipcrackerHelmet (+
-    _north/_east/_south), 256x256 RGBA under the root Textures/ folder, mirroring VFEP's own
-    warcasket layout.
-
-    Draw order: no drawData override, not by lifting this piece's south offset over the
-    pauldrons (that also raised it over every other set's pauldrons at the foundry); the
-    ordering lives on the shoulders def instead (its header has the altitude derivation), which
-    lowers our pauldrons under every helmet, so this helmet stays interchangeable with VFEP's.
+    No drawData override: the shoulders def lowers our pauldrons under every helmet instead
+    (its header has the altitude derivation), so this helmet stays interchangeable with VFEP's.
   -->
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
     <defName>SCWC_WarcasketHelmet_Shipcracker</defName>

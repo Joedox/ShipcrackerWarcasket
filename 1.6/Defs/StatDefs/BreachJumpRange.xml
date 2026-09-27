@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--
-    Pawn-level stat read by Ability_BreachJump for the planet-side range, so any worn piece can
-    add to it through equippedStatOffsets (VFEP's Aerial model with VFEP_PowerJumpRange, which
-    this is templated from). Base 0: no armor, no jump. Contributions: armor +20. The set's
-    shoulders and helmet add none, so its whole range sits on the piece that carries the
-    thrusters; VFEP's Aerial shoulders (+5) and helmet (+10) do, through Patches/AerialJumpRange.xml,
-    so a foundry mix with Aerial jump hardware reaches 35. Aerial's full set reaches 40. Left
-    visible on the pawn's stat sheet (VFEP hides its copies).
-    The description says nothing about space: the stat sheet has no runtime gate like the
-    ability tooltip's, and a player without Odyssey should not read about the breach burn;
-    "under gravity" is the only hint, and the ability tooltip carries the vacuum rule where it
-    applies. cacheable lets Ability_BreachJump read it through StatWorker's per-pawn cache with a
-    stale window, since the gizmo, range ring and hit test all read it every frame.
+    Pawn-level planet-side range read by Ability_BreachJump, so any worn piece can add to it
+    through equippedStatOffsets (templated from VFEP's VFEP_PowerJumpRange). Base 0: no armor,
+    no jump. Only the armor contributes (+20); Patches/AerialJumpRange.xml lets VFEP's Aerial
+    shoulders and helmet add theirs. Left visible on the stat sheet (VFEP hides its copies).
+    The description does not mention space beyond "under gravity": the stat sheet has no
+    runtime gate like the ability tooltip's, which carries the vacuum rule. cacheable because
+    the gizmo, range ring and hit test read it every frame.
   -->
   <StatDef>
     <defName>SCWC_BreachJumpRange</defName>
