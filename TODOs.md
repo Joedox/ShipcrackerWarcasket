@@ -1,28 +1,17 @@
 # TODOs
 
-- check the breach jump / breach burn gizmo icons in game, with and without VGE (purple variants shadow the orange ones from `Mods/VanillaGravshipExpanded/Textures/`)
+- VGE-root translations: the helmet oxygen comp's `chargeNoun` ("oxygen u³",
+  `1.6/Mods/VanillaGravshipExpanded/Patches/HelmetOxygen.xml`) is untranslated in every
+  language and absent from `Scripts/expected-injections.json`, apparently because the probe
+  refresh boots without VGE, so the checker cannot flag it. Work out how the refresh and checker
+  should cover gated roots, then add the entry under that root's `Languages/`.
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
-- review pass on tightness of xml comments since they ship in the release bundle and bloat player downloads
-
-## Scope
-
-- One warcasket set for VFE Pirates: armor + shoulder pads + helmet, as three
-  `VFEPirates.WarcasketDef`s parented on `VFEP_WarcasketArmorBase`,
-  `VFEP_WarcasketShoulderPadBase`, `VFEP_WarcasketHelmetBase` (see VFEP
-  `1.6/Defs/ThingDefs_Misc/Apparel_Various.xml` and `Apparel_Headgear.xml`). `WarcasketDef` adds
-  only `shortDescription`, `isArmor`, `isShoulderPads`, `isHelmet` over `ThingDef`.
-- Tuned for Odyssey's end-game threats, but Odyssey must stay optional. Decide what, if
-  anything, is Odyssey-only (e.g. a pawnkind/apparel-tag hook into VFEP's `VFEP_Salvager_*`
-  Odyssey pawnkinds, which VFEP adds via `1.6/Patches/Odyssey.xml`), and ship that from the
-  `Mods/Odyssey` + `1.6/Mods/Odyssey` compat roots drafted in `LoadFolders.xml`.
-- Odyssey's `PatchOperationFindMod` in VFEP matches by display name; our gate uses the package
-  id `ludeon.rimworld.odyssey` via `IfModActive`.
 
 ## Open questions
 
 - Acquisition: foundry only, by construction. Warcasket parts are destroyed on drop and
   untradeable, so raid presence (all three pieces carry `WarcasketVeteran` and `WarcasketAll`)
-  is threat and flavour, never loot. AI pawns never cast apparel abilities (VEF's
+  is threat and flavor, never loot. AI pawns never cast apparel abilities (VEF's
   `Pawn.TryGetAttackVerb` postfix only draws on `LearnedAbilities`), so a raider in the set is a
   shielded 1.5-blunt spacer suit with no jump. Still open: whether the Odyssey compat root
   should add a dedicated tag hook so salvagers field the set more often than the uniform
