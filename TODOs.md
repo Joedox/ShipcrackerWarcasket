@@ -6,6 +6,12 @@
   refresh boots without VGE, so the checker cannot flag it. Work out how the refresh and checker
   should cover gated roots, then add the entry under that root's `Languages/`.
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
+- `BreachJumpExtension.SpaceIcon` uses `??=` on a `Texture2D`, which bypasses Unity's overloaded
+  null check (the family rule in CLAUDE.md; UNT0008). Harmless today because the field lives on a
+  def extension that is replaced along with its def on a play-data reload, so it never outlives
+  the texture it caches, but swap it for an explicit `== null` re-resolve (see
+  `~/dev/PersonaWeaponsUnbound/Source/1.6/Defs/PWU_Textures.cs`) and check whether the Unity
+  analyzers are wired into this csproj at all, since they did not flag it. Noted 2026-10-04.
 
 ## Open questions
 
