@@ -65,6 +65,16 @@ public class BreachJumpExtension : DefModExtension
     // gizmo path, which is always the main thread.
     [Unsaved(false)] private Texture2D spaceIcon;
 
-    public Texture2D SpaceIcon =>
-        spaceIconPath.NullOrEmpty() ? null : spaceIcon ??= ContentFinder<Texture2D>.Get(spaceIconPath);
+    public Texture2D SpaceIcon
+    {
+        get
+        {
+            if (spaceIconPath.NullOrEmpty())
+                return null;
+            // Unity-overloaded ==, deliberately not ??= (UNT0023).
+            if (spaceIcon == null)
+                spaceIcon = ContentFinder<Texture2D>.Get(spaceIconPath);
+            return spaceIcon;
+        }
+    }
 }
