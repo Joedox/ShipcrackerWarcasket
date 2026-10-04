@@ -83,7 +83,10 @@ atomically. The deploy folder name follows the project name (`Mods/ShipcrackerWa
 **`.claude/` is only partly gitignored.** `.gitignore` carries `.claude/*` followed by
 `!.claude/skills/`, so the skills are tracked and shared while hooks and settings are local
 per-machine. Editing a skill is a committed, team-visible change and must keep in step with
-whatever it automates (e.g. `/release` encodes the CHANGELOG layout).
+whatever it automates (e.g. `/release` encodes the CHANGELOG layout and the version scheme:
+release candidates are `X.Y.Z-rc.N` tags, CHANGELOG-less and Workshop-less, with the suffix in
+`modVersion` and `AssemblyInformationalVersion` only; `release.yml` treats any suffixed tag as a
+prerelease to match).
 
 ## Project Structure
 
@@ -224,7 +227,8 @@ to be final. The public language roster lives in CONTRIBUTING.md.
 `CHANGELOG.md`, bump `About/About.xml` `<modVersion>` and `Source/1.6/Properties/AssemblyInfo.cs`,
 then push a `v*.*.*` tag. The GitHub Actions workflow (`.github/workflows/release.yml`) builds,
 stages via `StageMod`, lifts the tag's CHANGELOG section into the release body, and **fails the
-release if that section is missing**.
+release if that section is missing** (except for a suffixed `X.Y.Z-rc.N` candidate tag, which gets
+a stub body and is marked a prerelease).
 
 ## Debugging
 
