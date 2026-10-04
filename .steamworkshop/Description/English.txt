@@ -4,39 +4,39 @@ A new spacer-tier warcasket for [url=https://steamcommunity.com/sharedfiles/file
 
 [h1]About[/h1]
 
-The Shipcracker is a specialized boarding assault armor inspired by the Royalty DLC's Shipcracker backstory and the recent release of VGE2. It boasts drop thrusters that throw the wearer over walls or land hard enough to punch through. In orbit unhindered by gravity, the burn reaches anywhere in line-of-sight. Odyssey is optional; without it, it's still a heavy planet-side close-combat contender.
+The Shipcracker is a specialized boarding assault armor inspired by the Royalty DLC's Shipcracker backstory and the recent release of VGE2. It boasts drop thrusters that throw the wearer over walls or land hard enough to punch through. In orbit, unhindered by gravity, the burn reaches anywhere in line of sight. Odyssey is optional; without it, it's still a heavy planet-side close-combat contender.
 
 [hr][/hr]
-[h2]The Set[/h2]
-Close-combat plating on all three pieces, hitting a balance-point between VFE Pirates' Siegebreaker, Brute and Guardian sets.
+[h1]The Set[/h1]
+Close-combat plating on all three pieces, hitting a balance point between VFE Pirates' Siegebreaker, Brute and Guardian sets.
 [list]
 [*][b]Torso:[/b] the drop engine. Carries the Breach Jump ability and its fuel tank, plus a shield bubble against incoming fire.
 [*][b]Shoulder pads:[/b] the breaching arms. Landings hit structures 50% harder, demolishing even plasteel and uranium walls; slightly buffs melee capabilities.
 [*][b]Helmet:[/b] the sealed helm. A built-in respirator keeps breathing at full capacity, plus a small aiming speed bonus.
 [/list]
-With Odyssey: the full set is vacuum rated, and the extra functionalities gained are costed in gravlite panels
+With Odyssey: the full set is vacuum rated, and the space features are paid for in gravlite panels.
 
 [hr][/hr]
 [h1]Mod Compatibility[/h1]
 [list]
-[*]Safe to add to existing saves
-[*]Not safe to remove while a pawn is welded into the set
+[*]Safe to add to existing saves.
+[*]Not safe to remove while a pawn is welded into the set.
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948]Vanilla Factions Expanded - Pirates[/url]: required.
-[*]Save Our Ship 2: EVA rated under the same rules as VFE Pirates' own sets
-[*]Vanilla Gravship Expanded: follows its vacuum rules for warcaskets, and the helmet carries its own refillable oxygen supply. Improves spacewalking speed, and the jump burns astrofuel instead of chemfuel (purple!)
-[*]Not tested with Combat Extended (reports welcome)
+[*]Save Our Ship 2: EVA rated under the same rules as VFE Pirates' own sets.
+[*]Vanilla Gravship Expanded: follows its vacuum rules for warcaskets, and the helmet carries its own refillable oxygen supply. Improves spacewalking speed, and the jump burns astrofuel instead of chemfuel (purple!).
+[*]Not tested with Combat Extended (reports welcome).
 [/list]
 
 [hr][/hr]
 [h1]FAQ[/h1]
 [b]Q: Do I need Odyssey?[/b]
-A: No. Without it you get the set and the Breach Jump; the breach burn only exists where there is space to fly in, and the gravlite panel cost drops out.
+A: No. Without it you get the set and the Breach Jump; the Breach Burn only exists where there is space to fly in, and the gravlite panel cost drops out.
 
 [b]Q: Do I need VGE?[/b]
 A: No, though it's definitely designed with VGE2's ship-to-ship combat in mind, and the purple flame just looks cooler.
 
 [b]Q: How do I get it?[/b]
-A: Research VFEP's "Spacer Warcaskets" project, then weld it on at the warcasket foundry like any other set. Mix and match the pieces with VFE Pirates' own sets as you please.
+A: Research VFE Pirates' "Spacer Warcaskets" project, then weld it on at the warcasket foundry like any other set. Mix and match the pieces with VFE Pirates' own sets as you please.
 
 [b]Q: Was this made with LLM assistance?[/b]
 A: Some of the grunt code, and most localizations. I'm a software engineer by trade, and have been writing code for 25 years. All code is manually reviewed and tested; all bug reports and mod-conflicts followed up personally as time and detail allows. All art is either commissioned from humans, hand-authored in Krita, or both.
