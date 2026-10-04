@@ -2,8 +2,8 @@
 <LanguageData>
   <!-- EN: breach jump range -->
   <SCWC_BreachJumpRange.label>破墙跳跃距离</SCWC_BreachJumpRange.label>
-  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
-  <SCWC_BreachJumpRange.description>重力环境下破墙跳跃的最大距离。在真空中，跳跃距离只受视线限制。</SCWC_BreachJumpRange.description>
+  <!-- EN: The farthest a breach jump can carry the wearer. -->
+  <SCWC_BreachJumpRange.description>破墙跳跃的最大距离。</SCWC_BreachJumpRange.description>
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>破墙威力</SCWC_BreachPower.label>

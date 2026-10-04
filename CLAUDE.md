@@ -186,7 +186,10 @@ TODOs.md         - Scoping notes for the feature work that has not landed yet
   `1.6/Defs/**` or `1.6/Languages/**` loads unconditionally at any depth.
 - The game gates a DefInjected entry by the load root that CONTAINS it, never by the def it
   targets. The reverse mistake also bites: a main-tree def's translation placed in a compat root
-  silently vanishes when the gate is closed.
+  silently vanishes when the gate is closed. A field that a compat root's *patch* adds to a
+  main-tree def (the VGE helmet's oxygen `chargeNoun`) is a key that exists only behind that
+  gate, so its translation also lives in the gate's root; the sidecar's `worlds` field marks
+  such keys.
 - A compat root's language files must never reuse a main-tree file's language-relative path
   (`DefInjected/<Type>/<File>.xml`, `Keyed/<File>.xml`): the game dedups language files per mod by
   that path and silently skips one whole file, in an enumeration order that is not LoadFolders
@@ -203,17 +206,20 @@ gate). The DefInjected expected set is the checked-in sidecar `Scripts/expected-
 a dump of every injection point the *live* game sees for this mod, produced by
 `Scripts/refresh-translation-expectations.py` driving the L10nProbe dev mod (source at
 `l10n/probe/`; build/deploy it only from the canonical `~/dev/rimworld-l10n` checkout; this mod
-is ticked in the probe's settings) through the game's own walker. The checker refuses to run
-against stale expectations, so new content forces a regen; the release skill regenerates every
-release. Translation passes are deferred to the release gate and must wait for the English text
-to be final. The public language roster lives in CONTRIBUTING.md.
+is ticked in the probe's settings) through the game's own walker. The sidecar is multi-world: the
+refresh shim's `WORLDS` boots the game once per optional-package combination (base, odyssey,
+vge) and the checker validates each language against every world as the game would load it,
+which is what lets a gated root hold only the keys that exist behind its gate. The checker
+refuses to run against stale expectations, so new content forces a regen; the release skill
+regenerates every release. Translation passes are deferred to the release gate and must wait for
+the English text to be final. The public language roster lives in CONTRIBUTING.md.
 
 - **Shared l10n toolkit (`l10n/` submodule):** the checker/refresh/smoke engines, per-language
   mechanics references, cross-language lessons and Workshop conventions come from the
   `rimworld-l10n` repo, consumed as a git submodule pinned to a semver release tag (`git submodule
   status` names it; if `l10n/` is empty, run `git submodule update --init`). `Scripts/*.py` are
   thin per-repo config shims over its engines; each shim's comments carry this repo's rationale
-  (the VFEP dependency chain, why Odyssey is the only DLC pinned, why SOS2 and VGE1 are on the
+  (the VFEP dependency chain, which worlds are booted and why, why SOS2 and VGE1 are on the
   smoke list).
   Never edit `l10n/` in place here: mod-independent learnings go upstream in the canonical
   checkout; mod-specific ones go in the skill's glossary. The pin moves only at release, at the

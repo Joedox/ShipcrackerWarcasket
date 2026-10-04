@@ -1,13 +1,5 @@
 # TODOs
 
-- VGE-root translations: the helmet oxygen comp's `chargeNoun` ("oxygen u³",
-  `1.6/Mods/VanillaGravshipExpanded/Patches/HelmetOxygen.xml`) is untranslated in every
-  language and absent from `Scripts/expected-injections.json`, apparently because the probe
-  refresh boots without VGE, so the checker cannot flag it. Adding VGE to the boot list alone
-  makes it worse: the checker places an entry by the root that declares the def, and the helmet
-  is main-tree, so it would demand the key in the main tree (a startup error without VGE). Needs
-  an upstream engine change that attributes patch-added keys to the gate that adds them, then
-  the entry under that root's `Languages/`.
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
 
 ## Open questions

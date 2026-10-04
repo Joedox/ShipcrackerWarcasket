@@ -19,15 +19,12 @@ engine.REPO_ROOT = Path(__file__).resolve().parent.parent
 engine.PARITY_EXEMPT_FIELDS = set()
 
 # RATIONALE: no DLC is a hard dependency (About.xml's modDependencies are
-# Harmony and VFE Pirates). The defs carry MayRequire on two stat LEAVES
-# (VacuumResistance for Odyssey, SlaveSuppressionOffset for Ideology); a
-# gated leaf drops a number, not a def, so neither DLC changes the key set
-# the probe dumps. Odyssey is required anyway because it is the mod's
-# planned compat gate (LoadFolders.xml's commented Mods/Odyssey roots): the
-# moment an Odyssey-only def or DefInjected lands, a sidecar generated
-# without Odyssey would silently lose its keys, and pinning the DLC now
-# means that change needs no shim edit. Ideology stays out: nothing here
-# will ever gate translatable content on it.
+# Harmony and VFE Pirates), but the sidecar is multi-world (see the refresh
+# shim's WORLDS) and Odyssey must be active in at least one of them: it is
+# the mod's planned compat gate (LoadFolders.xml's commented Mods/Odyssey
+# roots) and the gate Vanilla Gravship Expanded sits behind. Ideology stays
+# out: its MayRequire stat leaf drops a number, never a key, and nothing
+# here will ever gate translatable content on it.
 engine.REQUIRED_DLCS = {"Odyssey"}
 
 # Every def here is a VFEPirates.WarcasketDef, a ThingDef subclass with no

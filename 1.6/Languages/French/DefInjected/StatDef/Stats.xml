@@ -3,8 +3,8 @@
 
   <!-- EN: breach jump range -->
   <SCWC_BreachJumpRange.label>portée du saut de brèche</SCWC_BreachJumpRange.label>
-  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
-  <SCWC_BreachJumpRange.description>La distance maximale d'un saut de brèche sous gravité. Dans le vide, seule la ligne de vue limite le saut.</SCWC_BreachJumpRange.description>
+  <!-- EN: The farthest a breach jump can carry the wearer. -->
+  <SCWC_BreachJumpRange.description>La distance maximale d'un saut de brèche.</SCWC_BreachJumpRange.description>
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>puissance de brèche</SCWC_BreachPower.label>

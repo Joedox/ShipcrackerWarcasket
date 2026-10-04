@@ -79,13 +79,16 @@ notes for the shim or flow edit this repo owes before continuing.
   def's `shortDescription` identical to its description's first paragraph,
   as the English does. Paragraph breaks are the literal two-character
   `\n` sequences the def XML uses.
-- **Compat roots carry no strings.** `1.6/Mods/VanillaGravshipExpanded/`
-  ships only patches, flecks and effecters with no translatable fields, and
-  the Odyssey root drafted in `LoadFolders.xml` is not live. Everything
-  lands in the main `1.6/Languages/<Language>/` tree today. If a gated root
-  ever gains a labelled def, its DefInjected must move into that root's own
-  `Languages/` with a gate-suffixed filename (see CLAUDE.md's Localization
-  and Optional-Content Gating section), never the main tree.
+- **One compat root carries strings: Vanilla Gravship Expanded.** Its
+  `HelmetOxygen.xml` patch adds an oxygen comp to the main-tree helmet, and
+  the comp's `chargeNoun` ("oxygen u³") is a key that exists only while VGE
+  is active. The sidecar marks it with `"worlds": ["vge"]`; its translation
+  lives ONLY under `1.6/Mods/VanillaGravshipExpanded/Languages/<Language>/
+  DefInjected/ThingDef/Apparel_VanillaGravshipExpanded.xml` (gate-suffixed
+  filename, see CLAUDE.md's Localization and Optional-Content Gating
+  section), never the main tree, where it would be a startup error for
+  players without VGE. Every other key is in all worlds and lands in the
+  main `1.6/Languages/<Language>/` tree. Ground "oxygen" against Core/Odyssey.
 - **Workshop page:** `.steamworkshop/Description/<Language>.txt`, per
   `l10n/workshop.md` and the folder's own `README.md`. The title's anchor
   term is "warcasket"; every localized title must contain the rendering of
@@ -129,8 +132,10 @@ workflows verbatim. This mod's specifics on top:
   languages). Sidecar regen: `python3
   Scripts/refresh-translation-expectations.py` (game must be closed; drives
   the deployed L10nProbe, which must have this mod ticked in its settings).
-- There is no compat-root routing to do today (see above); everything
-  lands in the main tree.
+- Routing: a key whose sidecar entry lists `worlds` goes to the root gated
+  on those worlds' extra package (today only the VGE charge noun, above);
+  the checker simulates every world and reports the right root when a key
+  is misplaced.
 - The public roster is CONTRIBUTING.md's localization table, update it in
   the same commit as any language addition or native review.
 - Machine-assisted passes are run as one Opus subagent per language with a

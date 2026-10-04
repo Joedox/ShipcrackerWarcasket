@@ -2,20 +2,64 @@
   "meta": {
     "gameBuild": "1.6.4871 rev591",
     "activeDlcs": [
-      "Core",
-      "Odyssey"
+      "Core"
     ],
     "modPackageId": "shunter.shipcrackerwarcasket",
     "modName": "Shipcracker Warcasket",
     "activeMods": [
       "brrainz.harmony",
       "ludeon.rimworld",
-      "ludeon.rimworld.odyssey",
       "oskarpotocki.vanillafactionsexpanded.core",
       "oskarpotocki.vfe.pirates",
       "shunter.shipcrackerwarcasket",
       "shunter.l10nprobe"
-    ]
+    ],
+    "worlds": {
+      "base": {
+        "activeMods": [
+          "brrainz.harmony",
+          "ludeon.rimworld",
+          "oskarpotocki.vanillafactionsexpanded.core",
+          "oskarpotocki.vfe.pirates",
+          "shunter.shipcrackerwarcasket",
+          "shunter.l10nprobe"
+        ],
+        "activeDlcs": [
+          "Core"
+        ]
+      },
+      "odyssey": {
+        "activeMods": [
+          "brrainz.harmony",
+          "ludeon.rimworld",
+          "ludeon.rimworld.odyssey",
+          "oskarpotocki.vanillafactionsexpanded.core",
+          "oskarpotocki.vfe.pirates",
+          "shunter.shipcrackerwarcasket",
+          "shunter.l10nprobe"
+        ],
+        "activeDlcs": [
+          "Core",
+          "Odyssey"
+        ]
+      },
+      "vge": {
+        "activeMods": [
+          "brrainz.harmony",
+          "ludeon.rimworld",
+          "ludeon.rimworld.odyssey",
+          "oskarpotocki.vanillafactionsexpanded.core",
+          "oskarpotocki.vfe.pirates",
+          "vanillaexpanded.gravship",
+          "shunter.shipcrackerwarcasket",
+          "shunter.l10nprobe"
+        ],
+        "activeDlcs": [
+          "Core",
+          "Odyssey"
+        ]
+      }
+    }
   },
   "defInjections": {
     "DamageDef": {
@@ -30,7 +74,7 @@
     },
     "StatDef": {
       "SCWC_BreachJumpRange.description": {
-        "english": "The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight.",
+        "english": "The farthest a breach jump can carry the wearer.",
         "required": true
       },
       "SCWC_BreachJumpRange.label": {
@@ -50,6 +94,14 @@
       "SCWC_BreachJumpFlyer.label": {
         "english": "flying",
         "required": true
+      },
+      "SCWC_WarcasketHelmet_Shipcracker.comps.CompApparelOxygenProvider.chargeNoun": {
+        "english": "oxygen u³",
+        "required": true,
+        "normalized": "SCWC_WarcasketHelmet_Shipcracker.comps.2.chargeNoun",
+        "worlds": [
+          "vge"
+        ]
       },
       "SCWC_WarcasketHelmet_Shipcracker.description": {
         "english": "Specialized spacer-tech warcasket helmet with improved impact dispersion, sealed and equipped with an onboard respirator and an aiming assist.\n\nAn Imperial pattern, not a pirate one: boarding corps built it on the 10th-generation spacer chassis to cross the gap between two ships and open the far hull from the outside. Salvage and desertion have since put it in foundries far from any Imperial dock.\n\nA shipcracker launches through the vacuum, lands on the enemy hull, punches through to the interior and takes the ship room by room. Under gravity the same burn clears a wall or a roof in a single hop. The shield stops bullets, not blades: pilots are chosen for a taste for close work.",

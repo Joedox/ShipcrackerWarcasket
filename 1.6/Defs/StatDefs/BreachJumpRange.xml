@@ -5,14 +5,15 @@
     through equippedStatOffsets (templated from VFEP's VFEP_PowerJumpRange). Base 0: no armor,
     no jump. Only the armor contributes (+20); Patches/AerialJumpRange.xml lets VFEP's Aerial
     shoulders and helmet add theirs. Left visible on the stat sheet (VFEP hides its copies).
-    The description does not mention space beyond "under gravity": the stat sheet has no
-    runtime gate like the ability tooltip's, which carries the vacuum rule. cacheable because
-    the gizmo, range ring and hit test read it every frame.
+    The description names neither gravity nor vacuum: the stat sheet has no runtime gate, so
+    the text must read right without Odyssey, and the ability tooltip already carries the
+    vacuum rule where it is acted on. cacheable because the gizmo, range ring and hit test
+    read it every frame.
   -->
   <StatDef>
     <defName>SCWC_BreachJumpRange</defName>
     <label>breach jump range</label>
-    <description>The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight.</description>
+    <description>The farthest a breach jump can carry the wearer.</description>
     <category>BasicsPawn</category>
     <toStringStyle>FloatOne</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>

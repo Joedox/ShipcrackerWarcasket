@@ -3,8 +3,8 @@
 
   <!-- EN: breach jump range -->
   <SCWC_BreachJumpRange.label>돌파 도약 거리</SCWC_BreachJumpRange.label>
-  <!-- EN: The farthest a breach jump can carry the wearer under gravity. In vacuum the jump is limited only by line of sight. -->
-  <SCWC_BreachJumpRange.description>중력 아래에서 돌파 도약으로 이동할 수 있는 최대 거리입니다. 진공에서는 시야가 닿는 곳이라면 거리 제한 없이 도약할 수 있습니다.</SCWC_BreachJumpRange.description>
+  <!-- EN: The farthest a breach jump can carry the wearer. -->
+  <SCWC_BreachJumpRange.description>돌파 도약으로 이동할 수 있는 최대 거리입니다.</SCWC_BreachJumpRange.description>
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>돌파력</SCWC_BreachPower.label>
