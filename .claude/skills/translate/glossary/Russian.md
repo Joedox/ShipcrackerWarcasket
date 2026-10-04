@@ -40,7 +40,7 @@ This mod follows that pattern so the set reads like one of VFEP's own.
 | chemfuel / astrofuel | химтопливо / астротопливо | Short form as in Odyssey and the pack (`химтоплива`); astrofuel is coined (VGE's Russian label not checked). |
 | deathMessage | `{0} {PAWN_gender ? раздавлен : раздавлена} пробивным ударом.` | Mirrors Core `Crush.deathMessage` (`раздавлен : раздавлена`). Keeps the English `{0}`; `PAWN` is supplied by the call site (`deathMessage.Formatted(pawn.LabelShortCap, pawn.Named("PAWN"))`, decompile-verified). |
 | Siegebreaker / Brute / Guardian (Workshop page) | прорывная / беспощадная / охранная броня | Community pack set adjectives. |
-| spacer warcaskets (research, Workshop FAQ) | технология космической брони мертвеца | Coined; the pack's research label was not available to check, so it is paraphrased rather than quoted. |
+| spacer warcaskets (research, Workshop FAQ) | «Космическая броня мертвеца» | Coined; the pack's research label was not available to check. Quoted as a project label because the English FAQ names the project. |
 | Workshop title | Абордажная броня мертвеца | Contains `броня мертвеца`; sentence case. |
 
 ## Pending native review

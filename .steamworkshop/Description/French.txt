@@ -4,11 +4,11 @@ Un nouveau sarcophage de niveau spatial pour [url=https://steamcommunity.com/sha
 
 [h1]À propos[/h1]
 
-Le Brise-coque est une armure spécialisée dans l'assaut par abordage, inspirée de l'histoire "pirate" de l'extension Royalty (Shipcracker en anglais). Ses propulseurs de largage projettent le porteur par-dessus les murs, ou le font atterrir assez fort pour les enfoncer. En orbite, sans gravité pour la freiner, la poussée atteint n'importe quel point en ligne de vue. L'extension Odyssey est facultative : sans elle, le Brise-coque reste un poids lourd du corps à corps à la surface des planètes.
+Le Brise-coque est une armure spécialisée dans l'assaut par abordage, inspirée de l'histoire "pirate" de l'extension Royalty (Shipcracker en anglais) et de la sortie récente de VGE2. Ses propulseurs de largage projettent le porteur par-dessus les murs, ou le font atterrir assez fort pour les enfoncer. En orbite, sans gravité pour la freiner, la poussée atteint n'importe quel point en ligne de vue. L'extension Odyssey est facultative : sans elle, le Brise-coque reste un poids lourd du corps à corps à la surface des planètes.
 
 [hr][/hr]
 [h2]L'ensemble[/h2]
-Les trois pièces sont blindées pour le corps à corps et se situent entre les ensembles Brise-siège, Brute et Gardien de VFE Pirates.
+Les trois pièces sont blindées pour le corps à corps et trouvent un point d'équilibre entre les ensembles Brise-siège, Brute et Gardien de VFE Pirates.
 [list]
 [*][b]Torse :[/b] le moteur de largage. Il donne la capacité « saut de brèche », embarque son réservoir de carburant et projette un bouclier d'énergie contre les tirs.
 [*][b]Épaulières :[/b] les bras de brèche. Les atterrissages frappent les structures 50% plus fort et démolissent même les murs en plastacier et en uranium. Elles améliorent aussi légèrement le combat en mêlée.
@@ -36,7 +36,7 @@ R : Non. Sans Odyssey, vous obtenez l'ensemble et le saut de brèche. La poussé
 R : Non, même si le mod a clairement été pensé pour les combats entre vaisseaux de VGE2, et que la flamme violette a nettement plus d'allure.
 
 [b]Q : Comment l'obtenir ?[/b]
-R : Recherchez « sarcophages spatiaux », puis soudez-le sur un colon à la fonderie de sarcophages, comme tout autre ensemble. Combinez librement ses pièces avec celles des ensembles de VFE Pirates.
+R : Recherchez le projet « sarcophages spatiaux » de VFE Pirates, puis soudez-le sur un colon à la fonderie de sarcophages, comme tout autre ensemble. Combinez librement ses pièces avec celles des ensembles de VFE Pirates.
 
 [b]Q : Est-ce que ça a été fait avec l'aide d'une IA ?[/b]
 R : Une partie du code répétitif, et la plupart des localisations. Je suis ingénieur logiciel de métier, et j'écris du code depuis 25 ans. Tout le code est relu et testé manuellement. Tous les rapports de bugs et les conflits entre mods sont suivis personnellement, selon le temps et les détails disponibles. Tous les visuels sont soit commandés à des artistes humains, soit réalisés à la main dans Krita, soit les deux.
@@ -44,3 +44,4 @@ R : Une partie du code répétitif, et la plupart des localisations. Je suis ing
 [hr][/hr]
 [h1]Liens[/h1]
 Code source, téléchargements manuels et suivi des problèmes : [url=https://github.com/sam-hunt/ShipcrackerWarcasket]GitHub[/url]
+Illustrations par [url=https://steamcommunity.com/profiles/76561198094174176/myworkshopfiles/?appid=294100]IcingWithCheeseCake[/url]

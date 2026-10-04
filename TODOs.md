@@ -25,5 +25,4 @@
 - **First Workshop publish.** Upload writes `About/PublishedFileId.txt`; commit it (every
   sibling tracks it), add the Workshop link to the README's Installation section, fill the
   id into the README's commented-out Steam badges and uncomment them, and paste
-  `.steamworkshop/Description/English.txt` into the page (add an art credit line to its Links
-  section if any of the art is commissioned).
+  `.steamworkshop/Description/English.txt` into the page.
