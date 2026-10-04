@@ -26,15 +26,11 @@
 
 ## Infrastructure follow-ups
 
-- **Cut a 0.1.0 pre-release to exercise CI before the real release.** The release workflow
-  fetches VEF and VFEP from the Workshop with SteamCMD (anonymous login) and injects them via
-  `VEF_PATH` / `VFEP_PATH`, but it has never run at all. Push a pre-release tag such as
-  `v0.1.0-rc.1` (BTG's first tag was `v0.1.0-alpha.1`): the workflow marks a release
-  pre-release only when the tag contains `alpha`, `beta` or `-rc`, so a bare `v0.1.0` would
-  publish as a normal release. The CHANGELOG section heading must match the tag without its
-  `v` (`## [0.1.0-rc.1]`) or the notes step fails. The existing `## [0.1.0] - TBD`
-  placeholder needs replacing either way. Check the Workshop fetch step, the translation gate
-  and the zip's contents, then delete the pre-release and its tag.
+- **Cut a release candidate to exercise CI before the real release.** The release
+  workflow fetches VEF and VFEP from the Workshop with SteamCMD (anonymous login) and injects
+  them via `VEF_PATH` / `VFEP_PATH`, but it has never run at all. `/release major rc` tags
+  `v1.0.0-rc.1`: a GitHub prerelease that needs no CHANGELOG section. Check the Workshop
+  fetch step, the translation gate and the zip's contents.
 - **Unit tests.** Five siblings (BTG, BionicThumbGuild, PWU, UWU, XenogermTraderStock) carry a
   headless xUnit net472 suite at `Tests/1.6/<Mod>.Tests.csproj` (Krafs ref, no live game;
   XenogermTraderStock's CLAUDE.md has the mono/copy-target notes). The pure logic here that is
@@ -42,7 +38,7 @@
   (`spaceFlightSpeedFactor` against the `spaceFlightMaxSeconds` cap), the thruster glow curve
   lookup, and whatever of the planet/space landing rules can be pulled out from `Map`.
 - **First Workshop publish.** Upload writes `About/PublishedFileId.txt`; commit it (every
-  sibling tracks it), add the Workshop link to the README's Installation section and the
-  siblings' Steam subscriber/download/favorite/view badges beside the RimWorld one, and paste
+  sibling tracks it), add the Workshop link to the README's Installation section, fill the
+  id into the README's commented-out Steam badges and uncomment them, and paste
   `.steamworkshop/Description/English.txt` into the page (add an art credit line to its Links
   section if any of the art is commissioned).
