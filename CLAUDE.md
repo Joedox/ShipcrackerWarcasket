@@ -50,6 +50,16 @@ default `bin/` and never deploy; only Release builds touch `1.6/Assemblies/` and
 **WSL setup:** `RIMWORLD_PATH` in `~/.bashrc` pointing at the Windows install, e.g.
 `/mnt/c/Program Files (x86)/Steam/steamapps/common/RimWorld`.
 
+### Tests
+
+`Tests/1.6/` is a headless xUnit (net472) suite, never shipped: `dotnet test
+Tests/1.6/ShipcrackerWarcasket.Tests.csproj` (vstest hosts it through mono on Linux/WSL). It
+copies the local install's runtime DLLs into its output, so CI builds it through the sln but
+cannot run it. Tests may only load types free of VEF and VFEP, whose DLLs never reach the test
+output, so logic worth testing is pulled out of the ability and flyer classes into plain ones
+(`SpacePreviewCache`, `BreachJumpExtension.FlightSeconds`). The XML tests read the repo's defs
+and patches from disk.
+
 ### Dependency-mod assemblies
 
 `VFEPirates.dll` and `VEF.dll` are referenced compile-only (`Private="false"`), resolved by the
@@ -100,6 +110,7 @@ Textures/        - Art (version-independent, loaded via the "/" root; no Common/
   Mods/<Name>/   - Optional-mod/DLC compat roots (version-specific), gated in LoadFolders.xml
 Mods/<Name>/     - Optional-mod/DLC compat roots (version-independent art)
 Source/1.6/      - C# source code targeting net472
+Tests/1.6/       - Headless xUnit suite (not shipped)
 Scripts/         - l10n config shims + the expected-injections.json sidecar (not shipped)
 l10n/            - rimworld-l10n toolkit, git submodule pinned to a release tag (not shipped)
 LoadFolders.xml  - Tells RimWorld which folders to load per game version

@@ -22,12 +22,6 @@
   them via `VEF_PATH` / `VFEP_PATH`, but it has never run at all. `/release major rc` tags
   `v1.0.0-rc.1`: a GitHub prerelease that needs no CHANGELOG section. Check the Workshop
   fetch step, the translation gate and the zip's contents.
-- **Unit tests.** Five siblings (BTG, BionicThumbGuild, PWU, UWU, XenogermTraderStock) carry a
-  headless xUnit net472 suite at `Tests/1.6/<Mod>.Tests.csproj` (Krafs ref, no live game;
-  XenogermTraderStock's CLAUDE.md has the mono/copy-target notes). The pure logic here that is
-  worth covering: the space preview's `PreviewState` bit packing, space-flight duration
-  (`spaceFlightSpeedFactor` against the `spaceFlightMaxSeconds` cap), the thruster glow curve
-  lookup, and whatever of the planet/space landing rules can be pulled out from `Map`.
 - **First Workshop publish.** Upload writes `About/PublishedFileId.txt`; commit it (every
   sibling tracks it), add the Workshop link to the README's Installation section, fill the
   id into the README's commented-out Steam badges and uncomment them, and paste
