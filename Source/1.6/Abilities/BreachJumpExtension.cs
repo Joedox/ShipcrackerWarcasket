@@ -29,6 +29,20 @@ public class BreachJumpExtension : DefModExtension
     public float spaceFlightSpeedFactor = 3f;
     public float spaceFlightMaxSeconds = 4f;
 
+    // Flight time for a jump of distance cells at flightSpeed cells/s. spaceBurn is the jump's
+    // extension on a space map and null on a planet; minSeconds (the flyer def's
+    // flightDurationMin) floors both, so it outranks the space cap.
+    public static float FlightSeconds(float distance, float flightSpeed, BreachJumpExtension spaceBurn, float minSeconds)
+    {
+        var seconds = Mathf.Max(distance, 1f) / flightSpeed;
+        if (spaceBurn != null)
+        {
+            seconds /= Mathf.Max(spaceBurn.spaceFlightSpeedFactor, 0.01f);
+            seconds = Mathf.Min(seconds, spaceBurn.spaceFlightMaxSeconds);
+        }
+        return Mathf.Max(seconds, minSeconds);
+    }
+
     // Effecters the flyer plays for the whole flight: flightEffecter on a planet,
     // spaceFlightEffecter on a space map (see PawnFlyer_BreachJump for why they differ). The
     // main tree names our orange copies of VFEP's Aerial and Shock exhausts; the Vanilla

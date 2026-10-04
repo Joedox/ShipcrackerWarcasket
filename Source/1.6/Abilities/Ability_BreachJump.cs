@@ -36,7 +36,7 @@ namespace ShipcrackerWarcasket;
 // Gizmo: VEF's base builds a new Command_Ability, tooltip and all, every time gizmos are
 // requested, which is every frame for a selected wearer. Vanilla's Ability instead keeps one
 // Command and refreshes only what moves, so GetGizmo does the same here (see there).
-public class Ability_BreachJump : Ability
+public class Ability_BreachJump : Ability, ISpacePreviewTester
 {
     // "Unlimited" as a finite number so VEF's range arithmetic and ring drawing stay sane
     // (DrawHighlight already skips the ring above GenRadial.MaxRadialPatternRadius).
@@ -54,26 +54,9 @@ public class Ability_BreachJump : Ability
     private readonly HashSet<IntVec3> spacePreviewUntested = new();
     private static readonly Stopwatch spacePreviewWatch = new();
 
-    // Per-cell preview cache for spacePreviewMap, indexed by CellIndices: 0 = never tested,
-    // otherwise the generation it was tested in shifted over two flag bits (see PreviewState).
-    // Walkable is kept apart from landable so the path-cost handler can tell a real walkability
-    // flip from filth landing in a cell that was already out of sight. Stale cells keep drawing
-    // until the sweep re-tests them; the generation bumps only between sweeps and only when the
-    // wearer moved or a map event set spacePreviewDirty, so a static scene costs nothing. Never
-    // cleared on a wearer move, which would wipe the outline and regrow it every step.
-    private int[] spacePreviewState;
+    // Landing cache for spacePreviewMap, whose change events feed it (see SetPreviewEventMap).
+    private readonly SpacePreviewCache spacePreview = new();
     private Map spacePreviewMap;
-    private IntVec3 spacePreviewOrigin;
-    private int spacePreviewGeneration;
-    private bool spacePreviewDirty;
-
-    // Sweep cursor into the row-major enumeration of spacePreviewRect, carried across frames so
-    // a re-test covers the whole view before another begins.
-    private CellRect spacePreviewRect;
-    private int spacePreviewCursor;
-
-    private const int PreviewWalkable = 1;
-    private const int PreviewLandable = 2;
 
     // Ticks the planet range stat may be served from StatWorker's per-thing cache. The stat is
     // read every frame from the gizmo, the range ring and the planet hit test, and changes only
@@ -99,9 +82,6 @@ public class Ability_BreachJump : Ability
     // mid-cast picks them back up within a tick of resuming.
     private bool casting;
     private float castProgress;
-
-    private static int PreviewState(int generation, bool walkable, bool landable) =>
-        (generation << 2) | (walkable ? PreviewWalkable : 0) | (landable ? PreviewLandable : 0);
 
     public BreachJumpExtension Ext => ext ??= def.GetModExtension<BreachJumpExtension>();
 
@@ -179,93 +159,34 @@ public class Ability_BreachJump : Ability
     }
 
     // Outlines the reachable cells inside the camera view in the range-ring color. Only cells
-    // in view are ever tested and results persist across frames, camera moves and wearer moves.
-    // Each frame advances the sweep cursor through the view, testing cells that are not of the
-    // current generation until SpacePreviewBudgetMs is spent; fresh cells are skipped for the
-    // cost of an array read. Whatever is known landable is drawn, and edges facing never-tested
-    // cells are suppressed, so the fill carves shadows into view rather than sweeping a visible
-    // frontier line up the map.
+    // in view are ever tested and results persist across frames, camera moves and wearer moves;
+    // each frame spends at most SpacePreviewBudgetMs advancing the cache's sweep (see
+    // SpacePreviewCache), and whatever is known landable is drawn.
     private void DrawSpaceValidCells()
     {
         var map = pawn.Map;
-        var origin = pawn.Position;
-        var cellCount = map.cellIndices.NumGridCells;
-        if (map != spacePreviewMap || spacePreviewState == null)
+        if (map != spacePreviewMap || !spacePreview.HasGrid)
         {
-            if (spacePreviewState == null || spacePreviewState.Length != cellCount)
-                spacePreviewState = new int[cellCount];
-            else
-                System.Array.Clear(spacePreviewState, 0, cellCount);
+            spacePreview.Reset(map.Size.x, map.Size.z, pawn.Position);
             SetPreviewEventMap(map);
-            spacePreviewOrigin = origin;
-            spacePreviewGeneration = 1;
-            spacePreviewDirty = false;
-            spacePreviewRect = default;
-            spacePreviewCursor = 0;
         }
 
         var rect = Find.CameraDriver.CurrentViewRect.ExpandedBy(1).ClipInsideMap(map);
-        if (rect != spacePreviewRect)
-        {
-            spacePreviewRect = rect;
-            spacePreviewCursor = 0;
-        }
-        var area = rect.Area;
-
-        // A new generation starts only once the previous sweep has covered the whole view, so a
-        // burst of map events coalesces into one re-test and no part of the view is starved.
-        // CanLandOn reads the wearer's live cell, so cells tested after a mid-sweep step already
-        // use the new origin; the mismatch recorded here just schedules the pass that makes the
-        // rest agree.
-        if (spacePreviewCursor >= area && (spacePreviewDirty || origin != spacePreviewOrigin))
-        {
-            spacePreviewGeneration++;
-            spacePreviewOrigin = origin;
-            spacePreviewDirty = false;
-            spacePreviewCursor = 0;
-        }
-
-        var indices = map.cellIndices;
-        var generation = spacePreviewGeneration;
-        var width = rect.Width;
         spacePreviewWatch.Restart();
-        for (; spacePreviewCursor < area; spacePreviewCursor++)
-        {
-            var cell = new IntVec3(rect.minX + spacePreviewCursor % width, 0, rect.minZ + spacePreviewCursor / width);
-            var i = indices.CellToIndex(cell);
-            if (spacePreviewState[i] >> 2 == generation)
-                continue;
-            var walkable = cell.WalkableBy(map, pawn);
-            spacePreviewState[i] = PreviewState(generation, walkable, walkable && CanReach(cell, map));
-            if (spacePreviewWatch.Elapsed.TotalMilliseconds >= SpacePreviewBudgetMs)
-            {
-                spacePreviewCursor++;
-                break;
-            }
-        }
-
-        // Collect everything known to be landable, at whatever age, plus the never-tested cells
-        // next to them: DrawFieldEdges skips edges that face a cell in ignoreBorderCells.
-        spacePreviewCells.Clear();
-        spacePreviewUntested.Clear();
-        var size = map.Size;
-        foreach (var cell in rect)
-        {
-            if ((spacePreviewState[indices.CellToIndex(cell)] & PreviewLandable) == 0)
-                continue;
-            spacePreviewCells.Add(cell);
-            for (var d = 0; d < 4; d++)
-            {
-                var n = cell + GenAdj.CardinalDirections[d];
-                if (n.x >= 0 && n.z >= 0 && n.x < size.x && n.z < size.z && spacePreviewState[indices.CellToIndex(n)] == 0)
-                    spacePreviewUntested.Add(n);
-            }
-        }
+        spacePreview.Sweep(rect, pawn.Position, this);
+        spacePreview.Collect(rect, spacePreviewCells, spacePreviewUntested);
 
         if (spacePreviewCells.Count > 0)
             GenDraw.DrawFieldEdges(spacePreviewCells, def.rangeRingColor,
                 ignoreBorderCells: spacePreviewUntested.Count > 0 ? spacePreviewUntested : null);
     }
+
+    // The sweep runs only from DrawSpaceValidCells, on the wearer's current map.
+    bool ISpacePreviewTester.Walkable(IntVec3 cell) => cell.WalkableBy(pawn.Map, pawn);
+
+    bool ISpacePreviewTester.CanReach(IntVec3 cell) => CanReach(cell, pawn.Map);
+
+    bool ISpacePreviewTester.OutOfBudget() => spacePreviewWatch.Elapsed.TotalMilliseconds >= SpacePreviewBudgetMs;
 
     // The preview cache is invalidated by the map's own change events rather than on a timer.
     // CanLandOn reads two things: walkability, which is the path grid (PathCostRecalculate fires
@@ -301,25 +222,24 @@ public class Ability_BreachJump : Ability
         }
     }
 
-    private void OnPreviewBuildingChanged(Building _) => spacePreviewDirty = true;
+    private void OnPreviewBuildingChanged(Building _) => spacePreview.MarkDirty();
 
-    private void OnPreviewDoorChanged(Building_Door _) => spacePreviewDirty = true;
+    private void OnPreviewDoorChanged(Building_Door _) => spacePreview.MarkDirty();
 
     private void OnPreviewPathCostRecalculated(IntVec3 cell)
     {
         var map = spacePreviewMap;
-        if (spacePreviewDirty || map == null || spacePreviewState == null || !cell.InBounds(map))
+        if (spacePreview.Dirty || map == null || !spacePreview.HasGrid || !cell.InBounds(map))
             return;
         if (pawn?.Map != map)
         {
-            spacePreviewDirty = true;
+            spacePreview.MarkDirty();
             return;
         }
-        var state = spacePreviewState[map.cellIndices.CellToIndex(cell)];
         // Only a change in walkability can alter this cell's answer through the path grid;
         // sight changes arrive through the building and door events.
-        if (state != 0 && ((state & PreviewWalkable) != 0) != cell.WalkableBy(map, pawn))
-            spacePreviewDirty = true;
+        if (spacePreview.TryGetCachedWalkable(cell, out var walkable) && walkable != cell.WalkableBy(map, pawn))
+            spacePreview.MarkDirty();
     }
 
     public override bool IsEnabledForPawn(out string reason)

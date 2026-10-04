@@ -52,13 +52,10 @@ public class PawnFlyer_BreachJump : AbilityPawnFlyer
         if (respawningAfterLoad)
             return;
 
-        var seconds = Mathf.Max(FlightDistance(this), 1f) / FlyingPawn.GetStatValue(SCWC_DefOf.VFEP_FlightSpeed);
-        if (inSpace && ability is Ability_BreachJump jump)
-        {
-            seconds /= Mathf.Max(jump.Ext.spaceFlightSpeedFactor, 0.01f);
-            seconds = Mathf.Min(seconds, jump.Ext.spaceFlightMaxSeconds);
-        }
-        seconds = Mathf.Max(seconds, def.pawnFlyer.flightDurationMin);
+        var seconds = BreachJumpExtension.FlightSeconds(FlightDistance(this),
+            FlyingPawn.GetStatValue(SCWC_DefOf.VFEP_FlightSpeed),
+            inSpace ? (ability as Ability_BreachJump)?.Ext : null,
+            def.pawnFlyer.flightDurationMin);
 
         ticksFlightTime = seconds.SecondsToTicks();
         ticksFlying = 0;
