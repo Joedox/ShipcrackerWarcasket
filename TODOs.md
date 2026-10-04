@@ -21,11 +21,17 @@
 
 ## Infrastructure follow-ups
 
+- **Run tests as an early step in the release flow**
 - **Cut a release candidate to exercise CI before the real release.** The release
   workflow fetches VEF and VFEP from the Workshop with SteamCMD (anonymous login) and injects
   them via `VEF_PATH` / `VFEP_PATH`, but it has never run at all. `/release major rc` tags
   `v1.0.0-rc.1`: a GitHub prerelease that needs no CHANGELOG section. Check the Workshop
   fetch step, the translation gate and the zip's contents.
+- **Workshop description translations are out of date.** The English review reworded
+  `.steamworkshop/Description/English.txt` (heading level, list punctuation, the Odyssey cost
+  line, "Breach Burn", "VFE Pirates" spelt out) and the nine `<Language>.txt` copies still
+  carry the old wording. The release skill regenerates them from the English source; as this
+  is the first release, do that step explicitly and check each before pasting.
 - **First Workshop publish.** Upload writes `About/PublishedFileId.txt`; commit it (every
   sibling tracks it), add the Workshop link to the README's Installation section, fill the
   id into the README's commented-out Steam badges and uncomment them, and paste
