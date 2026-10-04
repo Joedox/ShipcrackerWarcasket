@@ -1,6 +1,18 @@
 # TODOs
 
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
+- **Stat and cost balance review (dedicated session).** The set should sit beside VFEP's
+  Siegebreaker in the same tier, not be a straight best-in-slot upgrade over it. Two values
+  read stronger than intended:
+  - The armor's `EnergyShieldEnergyMax` 2.5 matches the Siegebreaker's, which VFEP sells as
+    "improved shield capacitors" (its standard spacer value is 1.5), on top of Blunt 1.5 and
+    the jump. The armor's description calls it a "standard ranged shield", so the text follows
+    whichever way the number lands (`shortDescription` and the first sentence of
+    `description`).
+  - The shoulders' `MeleeHitChance` / `MeleeDodgeChance` x1.2 (VFEP's 7th-gen Shock values)
+    are meant as slight buffs, and the Workshop page calls them that, but 20% each is more.
+  Rebalance stats and cost together; a moved number updates the def headers, any description
+  that names it and `.steamworkshop/Description/English.txt`.
 
 ## Open questions
 
