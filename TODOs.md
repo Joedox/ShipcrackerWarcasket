@@ -3,26 +3,17 @@
 - VGE-root translations: the helmet oxygen comp's `chargeNoun` ("oxygen u³",
   `1.6/Mods/VanillaGravshipExpanded/Patches/HelmetOxygen.xml`) is untranslated in every
   language and absent from `Scripts/expected-injections.json`, apparently because the probe
-  refresh boots without VGE, so the checker cannot flag it. Work out how the refresh and checker
-  should cover gated roots, then add the entry under that root's `Languages/`.
+  refresh boots without VGE, so the checker cannot flag it. Adding VGE to the boot list alone
+  makes it worse: the checker places an entry by the root that declares the def, and the helmet
+  is main-tree, so it would demand the key in the main tree (a startup error without VGE). Needs
+  an upstream engine change that attributes patch-added keys to the gate that adds them, then
+  the entry under that root's `Languages/`.
 - profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
-- `BreachJumpExtension.SpaceIcon` uses `??=` on a `Texture2D`, which bypasses Unity's overloaded
-  null check (the family rule in CLAUDE.md; UNT0008). Harmless today because the field lives on a
-  def extension that is replaced along with its def on a play-data reload, so it never outlives
-  the texture it caches, but swap it for an explicit `== null` re-resolve (see
-  `~/dev/PersonaWeaponsUnbound/Source/1.6/Defs/PWU_Textures.cs`) and check whether the Unity
-  analyzers are wired into this csproj at all, since they did not flag it. Noted 2026-10-04.
 
 ## Open questions
 
-- Acquisition: foundry only, by construction. Warcasket parts are destroyed on drop and
-  untradeable, so raid presence (all three pieces carry `WarcasketVeteran` and `WarcasketAll`)
-  is threat and flavor, never loot. AI pawns never cast apparel abilities (VEF's
-  `Pawn.TryGetAttackVerb` postfix only draws on `LearnedAbilities`), so a raider in the set is a
-  shielded 1.5-blunt spacer suit with no jump. Still open: whether the Odyssey compat root
-  should add a dedicated tag hook so salvagers field the set more often than the uniform
-  veteran pick does.
-- Research gating: which VFEP research project(s) to parent on (`ResearchProjects_Various.xml`).
+- Salvagers: watch what Vanilla Expanded does with Odyssey's salvager faction, then revisit
+  whether they should field the set.
 
 ## Infrastructure follow-ups
 
