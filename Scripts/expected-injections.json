@@ -82,7 +82,7 @@
         "required": true
       },
       "SCWC_BreachPower.description": {
-        "english": "Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected.",
+        "english": "Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to creatures and mechanoids is unaffected.",
         "required": true
       },
       "SCWC_BreachPower.label": {
@@ -116,7 +116,7 @@
         "required": true
       },
       "SCWC_WarcasketShoulders_Shipcracker.description": {
-        "english": "Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with hardened breaching arms that let a landing tear through plasteel, and melee assistor modules.\n\nAn Imperial pattern, not a pirate one: boarding corps built it on the 10th-generation spacer chassis to cross the gap between two ships and open the far hull from the outside. Salvage and desertion have since put it in foundries far from any Imperial dock.\n\nA shipcracker launches through the vacuum, lands on the enemy hull, punches through to the interior and takes the ship room by room. Under gravity the same burn clears a wall or a roof in a single hop. The shield stops bullets, not blades: pilots are chosen for a taste for close work.",
+        "english": "Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with melee assistor modules and hardened breaching arms that let a landing tear through plasteel.\n\nAn Imperial pattern, not a pirate one: boarding corps built it on the 10th-generation spacer chassis to cross the gap between two ships and open the far hull from the outside. Salvage and desertion have since put it in foundries far from any Imperial dock.\n\nA shipcracker launches through the vacuum, lands on the enemy hull, punches through to the interior and takes the ship room by room. Under gravity the same burn clears a wall or a roof in a single hop. The shield stops bullets, not blades: pilots are chosen for a taste for close work.",
         "required": true
       },
       "SCWC_WarcasketShoulders_Shipcracker.label": {
@@ -124,7 +124,7 @@
         "required": true
       },
       "SCWC_WarcasketShoulders_Shipcracker.shortDescription": {
-        "english": "Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with hardened breaching arms that let a landing tear through plasteel, and melee assistor modules.",
+        "english": "Specialized spacer-tech warcasket pauldrons with improved impact dispersion, equipped with melee assistor modules and hardened breaching arms that let a landing tear through plasteel.",
         "required": true
       },
       "SCWC_Warcasket_Shipcracker.apparel.renderNodeProperties.0.debugLabel": {
