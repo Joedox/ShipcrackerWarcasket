@@ -7,24 +7,24 @@ Un nuevo ataúd de guerra de la era espacial para [url=https://steamcommunity.co
 El rompenaves es una armadura especializada para asaltos de abordaje, inspirada en el trasfondo "navegante" del DLC Royalty y en el reciente lanzamiento de VGE2. Sus propulsores de descenso lanzan al portador por encima de los muros, o lo hacen aterrizar con tanta fuerza que los atraviesa. En órbita, sin gravedad que lo frene, el impulso llega a cualquier punto que tenga a la vista. Odyssey es opcional: sin él, sigue siendo una opción de peso para el combate cercano en tierra firme.
 
 [hr][/hr]
-[h2]El conjunto[/h2]
+[h1]El conjunto[/h1]
 Las tres piezas llevan blindaje de combate cercano y encuentran un punto de equilibrio entre las series Siegebreaker, Bruto y Guardián de VFE Pirates.
 [list]
 [*][b]Torso:[/b] el motor de descenso. Incluye la habilidad "salto de brecha" y su depósito de combustible, además de un escudo que frena los disparos.
 [*][b]Hombreras:[/b] los brazos zapadores. Los aterrizajes golpean las estructuras un 50% más fuerte y derriban incluso muros de plastiacero y uranio. También mejoran un poco el combate cuerpo a cuerpo.
 [*][b]Casco:[/b] el yelmo hermético. Su respirador integrado mantiene la respiración al máximo, y además acelera un poco el apuntado.
 [/list]
-Con Odyssey, el conjunto completo resiste el vacío, y sus funciones extra se pagan en paneles de gravilita.
+Con Odyssey, el conjunto completo resiste el vacío, y sus funciones espaciales se pagan en paneles de gravilita.
 
 [hr][/hr]
 [h1]Compatibilidad con mods[/h1]
 [list]
-[*]Seguro de añadir a partidas existentes
-[*]No es seguro quitarlo mientras haya alguien sepultado en el conjunto
+[*]Seguro de añadir a partidas existentes.
+[*]No es seguro quitarlo mientras haya alguien sepultado en el conjunto.
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948]Vanilla Factions Expanded - Pirates[/url]: obligatorio.
-[*]Save Our Ship 2: apto para EVA con las mismas reglas que las series propias de VFE Pirates
-[*]Vanilla Gravship Expanded: sigue sus reglas de vacío para ataúdes de guerra, y el casco lleva su propia reserva de oxígeno recargable. Mejora la velocidad en los paseos espaciales, y el salto quema astrocombustible en lugar de biocombustible (¡púrpura!)
-[*]No se ha probado con Combat Extended (se agradecen los informes)
+[*]Save Our Ship 2: apto para EVA con las mismas reglas que las series propias de VFE Pirates.
+[*]Vanilla Gravship Expanded: sigue sus reglas de vacío para ataúdes de guerra, y el casco lleva su propia reserva de oxígeno recargable. Mejora la velocidad en los paseos espaciales, y el salto quema astrocombustible en lugar de biocombustible (¡púrpura!).
+[*]No se ha probado con Combat Extended (se agradecen los informes).
 [/list]
 
 [hr][/hr]

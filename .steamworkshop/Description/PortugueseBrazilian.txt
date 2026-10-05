@@ -7,30 +7,30 @@ Uma nova carcaça de guerra de nível espacial para [url=https://steamcommunity.
 A Quebra-Naves é uma armadura especializada para assaltos de abordagem, inspirada no passado "Shipcracker" ("Rastreador de nave" na tradução oficial) da DLC Royalty e no recente lançamento do VGE2. Seus propulsores de descida lançam o portador por cima de muros ou o fazem aterrissar com força suficiente para atravessá-los. Em órbita, livre da gravidade, o impulso alcança qualquer ponto na linha de visão. A Odyssey é opcional. Sem ela, a armadura continua sendo uma concorrente pesada para o combate corpo a corpo em solo.
 
 [hr][/hr]
-[h2]O conjunto[/h2]
+[h1]O conjunto[/h1]
 As três peças trazem blindagem para combate corpo a corpo e encontram um ponto de equilíbrio entre os conjuntos Quebra-cerco, Bruto e Guardião do VFE Pirates.
 [list]
 [*][b]Tronco:[/b] o motor de descida. Traz a habilidade Salto de Irrupção e seu tanque de combustível, além de uma bolha de escudo contra disparos.
 [*][b]Ombreiras:[/b] os braços de irrupção. As aterrissagens atingem estruturas com 50% mais força e derrubam até paredes de plastiaço e urânio. Também melhoram um pouco o combate corpo a corpo.
 [*][b]Capacete:[/b] o elmo selado. Um respirador embutido mantém a respiração em capacidade total, e o capacete ainda dá um pequeno bônus na velocidade de mira.
 [/list]
-Com a Odyssey: o conjunto inteiro resiste ao vácuo, e as funções extras custam painéis de gravilita.
+Com a Odyssey: o conjunto inteiro resiste ao vácuo, e os recursos espaciais custam painéis de gravilita.
 
 [hr][/hr]
 [h1]Compatibilidade[/h1]
 [list]
-[*]Seguro para adicionar a jogos salvos existentes
-[*]Não é seguro remover enquanto houver um colono integrado ao conjunto
+[*]Seguro para adicionar a jogos salvos existentes.
+[*]Não é seguro remover enquanto houver um colono integrado ao conjunto.
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948]Vanilla Factions Expanded - Pirates[/url]: obrigatório.
-[*]Save Our Ship 2: vale como traje de EVA pelas mesmas regras dos conjuntos do próprio VFE Pirates
-[*]Vanilla Gravship Expanded: segue as regras de vácuo dele para carcaças de guerra, e o capacete leva o próprio suprimento de oxigênio recarregável. A caminhada espacial fica mais rápida, e o salto queima astrocombustível em vez de combustível químico (roxo!)
-[*]Não testado com o Combat Extended (relatos são bem-vindos)
+[*]Save Our Ship 2: vale como traje de EVA pelas mesmas regras dos conjuntos do próprio VFE Pirates.
+[*]Vanilla Gravship Expanded: segue as regras de vácuo dele para carcaças de guerra, e o capacete leva o próprio suprimento de oxigênio recarregável. A caminhada espacial fica mais rápida, e o salto queima astrocombustível em vez de combustível químico (roxo!).
+[*]Não testado com o Combat Extended (relatos são bem-vindos).
 [/list]
 
 [hr][/hr]
 [h1]Perguntas frequentes[/h1]
 [b]P: Preciso da Odyssey?[/b]
-R: Não. Sem ela você recebe o conjunto e o Salto de Irrupção. O impulso de irrupção só existe onde há espaço para voar, e o custo em painéis de gravilita desaparece.
+R: Não. Sem ela você recebe o conjunto e o Salto de Irrupção. O Impulso de Irrupção só existe onde há espaço para voar, e o custo em painéis de gravilita desaparece.
 
 [b]P: Preciso do VGE?[/b]
 R: Não, mas o mod foi pensado para o combate entre naves do VGE2, e a chama roxa fica bem mais bonita.
