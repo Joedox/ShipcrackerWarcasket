@@ -4,6 +4,7 @@
     <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <!-- Headless: no live RimWorld game context, no maps, no Find.*. The tests reach only
          types free of VEF/VFEP (neither DLL is copied here), plus the repo's XML on disk. -->
   </PropertyGroup>

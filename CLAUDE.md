@@ -58,7 +58,8 @@ copies the local install's runtime DLLs into its output, so CI builds it through
 cannot run it. Tests may only load types free of VEF and VFEP, whose DLLs never reach the test
 output, so logic worth testing is pulled out of the ability and flyer classes into plain ones
 (`SpacePreviewCache`, `BreachJumpExtension.FlightSeconds`). The XML tests read the repo's defs
-and patches from disk.
+and patches from disk. The release skill runs the suite and a Release build as its first gate,
+before anything that boots the game or commits.
 
 ### Dependency-mod assemblies
 
@@ -86,9 +87,12 @@ atomically. The deploy folder name follows the project name (`Mods/ShipcrackerWa
   it excludes. It is generic over folders, so a new `1.7/` or `Sounds/` needs no build change; only
   a brand-new *file type* does. Local deploy and CI release both call it, so they can't drift.
 - **Stop hook (`.claude/hooks/sync-mod.sh`):** rebuilds+redeploys after a turn only when
-  mod-relevant files changed, logs to `$TMPDIR/scwc-build.log`, warns on failure. Wired via a
-  `Stop` hook in `.claude/settings.local.json`. It is local-only (see below); if it is ever
-  promoted to committed config, move the helper somewhere version-controlled.
+  mod-relevant files changed, logs to `$TMPDIR/scwc-build.log`. On failure it exits 2 with the
+  errors on stderr, which Claude Code feeds back to the agent and the turn continues, so the
+  agent fixes the build rather than the user finding it later; a second failure in the same
+  turn (`stop_hook_active`) only warns, so it cannot loop. Wired via a `Stop` hook in
+  `.claude/settings.local.json`. It is local-only (see below); if it is ever promoted to
+  committed config, move the helper somewhere version-controlled.
 
 **`.claude/` is only partly gitignored.** `.gitignore` carries `.claude/*` followed by
 `!.claude/skills/`, so the skills are tracked and shared while hooks and settings are local
@@ -144,6 +148,13 @@ TODOs.md         - Scoping notes for the feature work that has not landed yet
 - **C#:** root namespace `ShipcrackerWarcasket`; patch classes live in `Source/1.6/Patches/`
   under the `.Patches` namespace suffix to avoid RimWorld type-name conflicts. Log with the
   `[Shipcracker Warcasket]` prefix.
+- **Warnings are build errors.** Both csproj files set `TreatWarningsAsErrors`, so every
+  compiler and analyzer (Roslynator, Microsoft.Unity.Analyzers) warning fails the build, locally,
+  in the Stop hook and in CI. Nothing else in the toolchain shows a warning to an agent (the LSP
+  exposes no diagnostics; a passing build log is never read), so a warning that merely prints
+  is one that is never fixed. Severities are pinned in `.editorconfig`: `warning` blocks the
+  build, `suggestion` is IDE-only (RCS1146 sits there deliberately; see the note in that file).
+  Fix the code, not the severity, unless the rule is wrong for this domain.
 - **Drawing on the wearer goes through the pawn render tree, not draw hooks.** Extra worn
   graphics are `apparel.renderNodeProperties` entries on the def (additive to the default
   worn-graphic node; the armor's thruster glow is the model). The zoomed-out pawn cache bakes
