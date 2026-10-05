@@ -10,8 +10,10 @@
     effectiveness, priced a little under them:
     - ArmorRating_Blunt 1.5 (Brute and Guardian; the other three 1.0) on all three pieces, the
       Guardian pattern. Sharp 2 and Heat 1 are the shared spacer values.
-    - EnergyShieldEnergyMax 2.5 (Siegebreaker 2.5; Guardian, Controller, Sarcophagus 1.5;
-      Brute 5.0): the bubble blocks ranged fire only, what a melee suit needs while closing.
+    - EnergyShieldEnergyMax 2.0: above the 1.5 Guardian, Controller and Sarcophagus carry,
+      under the Siegebreaker's 2.5, the "improved shield capacitors" that set is sold on (Brute
+      5.0, melee-locked). The bubble blocks ranged fire only, what a melee suit needs while
+      closing; the plating and the jump are where this set spends its budget.
     - costList ComponentSpacer 6 / Plasteel 180 / Uranium 50 (Siegebreaker 6 / 145 / 50,
       Guardian 6 / 200 / 50). VFEP uses the component count as a tech-complexity dial
       (Controller 12, the utility sets 6, Brute 4); a drop thruster is Aerial-tier tech, so 6,
@@ -56,8 +58,8 @@
   <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
     <defName>SCWC_Warcasket_Shipcracker</defName>
     <label>shipcracker warcasket</label>
-    <shortDescription>Specialized spacer-tech warcasket shell with improved impact dispersion, fitted with fuel-burning drop thrusters for breaching jumps and a standard ranged shield.</shortDescription>
-    <description>Specialized spacer-tech warcasket shell with improved impact dispersion, fitted with fuel-burning drop thrusters for breaching jumps and a standard ranged shield.\n\nAn Imperial pattern, not a pirate one: boarding corps built it on the 10th-generation spacer chassis to cross the gap between two ships and open the far hull from the outside. Salvage and desertion have since put it in foundries far from any Imperial dock.\n\nA shipcracker launches through the vacuum, lands on the enemy hull, punches through to the interior and takes the ship room by room. Under gravity the same burn clears a wall or a roof in a single hop. The shield stops bullets, not blades: pilots are chosen for a taste for close work.</description>
+    <shortDescription>Specialized spacer-tech warcasket shell with improved impact dispersion, fitted with fuel-burning drop thrusters for breaching jumps and a ranged shield.</shortDescription>
+    <description>Specialized spacer-tech warcasket shell with improved impact dispersion, fitted with fuel-burning drop thrusters for breaching jumps and a ranged shield.\n\nAn Imperial pattern, not a pirate one: boarding corps built it on the 10th-generation spacer chassis to cross the gap between two ships and open the far hull from the outside. Salvage and desertion have since put it in foundries far from any Imperial dock.\n\nA shipcracker launches through the vacuum, lands on the enemy hull, punches through to the interior and takes the ship room by room. Under gravity the same burn clears a wall or a roof in a single hop. The shield stops bullets, not blades: pilots are chosen for a taste for close work.</description>
     <graphicData>
       <texPath>Things/Pawn/Warcasketlike/WarcasketShipcracker/WarcasketShipcracker</texPath>
     </graphicData>
@@ -70,7 +72,7 @@
       <Insulation_Heat>80</Insulation_Heat>
       <EquipDelay>1</EquipDelay>
       <EnergyShieldRechargeRate>0.01</EnergyShieldRechargeRate>
-      <EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>
+      <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax>
     </statBases>
     <equippedStatOffsets>
       <PsychicSensitivity>-0.5</PsychicSensitivity>

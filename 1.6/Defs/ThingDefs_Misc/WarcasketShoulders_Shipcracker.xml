@@ -13,8 +13,9 @@
     Abilities, the breaching arms:
     - SCWC_BreachPower +0.5: landings deal 900 to a wall cell instead of 600, enough for
       plasteel and uranium walls; structures only (StatDefs/BreachPower.xml).
-    - MeleeHitChance and MeleeDodgeChance x1.2 through the ApparelExtension: Shock's shoulders'
-      numbers, the only VFEP precedent for the pair.
+    - MeleeHitChance and MeleeDodgeChance x1.15 through the ApparelExtension: a step under
+      Shock's x1.2 shoulders, the only VFEP precedent for the pair, because this set also
+      carries 10th-gen plating and a shield where Shock has neither.
     - No jump range; the range lives on the armor. No EnergyShieldRechargeRate offset
       (Siegebreaker's +1): VEF's CompShieldBubble reads that stat off the apparel, not the
       pawn, so the offset never reaches the shield.
@@ -99,8 +100,8 @@
              VFEP_WarcasketShoulderPadBase carries; see the armor def's header. -->
         <priority>1</priority>
         <equippedStatFactors>
-          <MeleeHitChance>1.2</MeleeHitChance>
-          <MeleeDodgeChance>1.2</MeleeDodgeChance>
+          <MeleeHitChance>1.15</MeleeHitChance>
+          <MeleeDodgeChance>1.15</MeleeDodgeChance>
         </equippedStatFactors>
       </li>
     </modExtensions>
