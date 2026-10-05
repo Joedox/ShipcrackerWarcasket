@@ -1,7 +1,5 @@
 # TODOs
 
-- profile the postfix enabling zoomed-out thruster-glow recoloring on our old heavily modded save
-
 ## Open questions
 
 - Salvagers: watch what Vanilla Expanded does with Odyssey's salvager faction, then revisit
@@ -9,7 +7,7 @@
 
 ## Infrastructure follow-ups
 
-- **Run tests as an early step in the release flow**
+- **Run tests and lint as an early step in the release flow**
 - **Cut a release candidate to exercise CI before the real release.** The release
   workflow fetches VEF and VFEP from the Workshop with SteamCMD (anonymous login) and injects
   them via `VEF_PATH` / `VFEP_PATH`, but it has never run at all. `/release major rc` tags

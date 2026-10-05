@@ -3,7 +3,7 @@
   <name>Shipcracker Warcasket</name>
   <author>Sam Hunt</author>
   <packageId>shunter.shipcrackerwarcasket</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>1.0.0-rc.1</modVersion>
   <description>Adds the Shipcracker warcasket, a late-game boarding armor set for VFE Pirates, welded at the warcasket foundry like any other. The armor's drop thrusters power the Breach Jump, which punches through roofs and walls on landing. With Odyssey, the same thrusters also power the Breach Burn in space: an unlimited-range beeline to anywhere in line of sight. Odyssey is optional. Compatible with Save Our Ship 2 and Vanilla Gravship Expanded. Requires Vanilla Factions Expanded - Pirates.</description>
   <supportedVersions>
     <li>1.6</li>
