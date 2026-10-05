@@ -8,7 +8,7 @@
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>puissance de brèche</SCWC_BreachPower.label>
-  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
-  <SCWC_BreachPower.description>Un multiplicateur sur les dégâts que l'atterrissage d'un saut de brèche inflige aux murs et aux autres structures. Les dégâts infligés aux personnes ne changent pas.</SCWC_BreachPower.description>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to creatures and mechanoids is unaffected. -->
+  <SCWC_BreachPower.description>Un multiplicateur sur les dégâts que l'atterrissage d'un saut de brèche inflige aux murs et aux autres structures. Les dégâts infligés aux créatures et aux mécanoïdes ne changent pas.</SCWC_BreachPower.description>
 
 </LanguageData>

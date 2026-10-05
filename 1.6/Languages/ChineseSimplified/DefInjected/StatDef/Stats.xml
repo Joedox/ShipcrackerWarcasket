@@ -7,6 +7,6 @@
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>破墙威力</SCWC_BreachPower.label>
-  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
-  <SCWC_BreachPower.description>破墙跳跃着陆时对墙体等建筑结构造成的伤害乘数。对人员的伤害不受影响。</SCWC_BreachPower.description>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to creatures and mechanoids is unaffected. -->
+  <SCWC_BreachPower.description>破墙跳跃着陆时对墙体等建筑结构造成的伤害乘数。对生物与机械族的伤害不受影响。</SCWC_BreachPower.description>
 </LanguageData>

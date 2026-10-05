@@ -8,7 +8,7 @@
 
   <!-- EN: breach power -->
   <SCWC_BreachPower.label>돌파력</SCWC_BreachPower.label>
-  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to people is unaffected. -->
-  <SCWC_BreachPower.description>돌파 도약의 착지가 벽과 기타 구조물에 입히는 피해의 배율입니다. 사람에게 입히는 피해에는 영향을 주지 않습니다.</SCWC_BreachPower.description>
+  <!-- EN: Multiplier on the damage a breach jump landing deals to walls and other structures. Damage to creatures and mechanoids is unaffected. -->
+  <SCWC_BreachPower.description>돌파 도약의 착지가 벽과 기타 구조물에 입히는 피해의 배율입니다. 생물과 메카노이드에게 입히는 피해에는 영향을 주지 않습니다.</SCWC_BreachPower.description>
 
 </LanguageData>
