@@ -123,7 +123,7 @@
       <li Class="CompProperties_ApparelReloadable">
         <maxCharges>100</maxCharges>
         <ammoDef>Chemfuel</ammoDef>
-        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
         <soundReload>Standard_Reload</soundReload>
         <hotKey>Misc4</hotKey>
