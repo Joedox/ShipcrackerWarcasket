@@ -14,3 +14,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      section before tagging. Release candidates (X.Y.Z-rc.N) get no section: their
      changes land in the stable version's section at promotion. The /release skill
      walks through all of this. -->
+
+## [1.0.0] - 2026-10-06
+
+First release.
+
+### Features
+
+- Shipcracker warcasket set: armor, shoulder pads, helmet.
+- Breach Jump: leap walls, land with a wall-breaking shockwave.
+- Breach Burn (Odyssey): fast line-of-sight flight in space.
+- Vacuum rated with Odyssey.
+- Aerial shoulders and helmet extend the jump's range.
+- Worn by veteran raiders.
+- Save Our Ship 2 and Vanilla Gravship Expanded support.
+- Translated into 9 languages.
+
+[1.0.0]: https://github.com/sam-hunt/ShipcrackerWarcasket/releases/tag/v1.0.0

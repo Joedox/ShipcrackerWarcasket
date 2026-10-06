@@ -1,5 +1,8 @@
 # TODOs
 
+- Review dead code commented in LoadFolders.xml?
+- Replace ModIcon.png when the cleaned texture arrives
+
 ## Open questions
 
 - Salvagers: watch what Vanilla Expanded does with Odyssey's salvager faction, then revisit
