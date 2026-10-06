@@ -108,7 +108,7 @@ prerelease to match).
 ## Project Structure
 
 ```
-About/           - Mod metadata (About.xml; Preview.png and PublishedFileId.txt once published)
+About/           - Mod metadata (About.xml, ModIcon.png, Preview.png, PublishedFileId.txt)
 Textures/        - Art (version-independent, loaded via the "/" root; no Common/ root)
 1.6/             - RimWorld 1.6 specific content
   Assemblies/    - Compiled DLLs (build output, gitignored)
