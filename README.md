@@ -28,8 +28,8 @@ Odyssey is optional. Without it, the Shipcracker is a planet-side breaching suit
 ### The Shipcracker Set
 
 Armor, shoulder pads and helmet, welded on at VFE Pirates' warcasket foundry and unlocked by its
-spacer warcaskets research. Close-combat plating in all three pieces, pitched between VFE
-Pirates' Brute and Guardian and priced a little under them.
+spacer warcaskets research. Close-combat plating on all three pieces, hitting a balance point
+between VFE Pirates' Siegebreaker, Brute and Guardian sets.
 
 - **Armor**: the drop engine. Carries the Breach Jump and its chemfuel tank, plus a shield bubble
   against incoming fire
