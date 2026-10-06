@@ -43,13 +43,15 @@ public class PawnFlyer_BreachJump : AbilityPawnFlyer
 
     // ability is assigned between MakeFlyer and GenSpawn.Spawn, so it is set by the time this runs.
     // The wearer is lit for the whole flight (Ability_BreachJump.ThrusterGlowLit), so the takeoff
-    // and the landing in RespawnPawn are the glow's two flight transitions.
+    // and the landing in RespawnPawn are the glow's two flight transitions. A flyer respawned by
+    // a gravship landing keeps its timing, as vanilla's does: Notify_TransportedOnGravship has
+    // already shifted the flight onto the new map's cells, so it carries on mid-air.
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
         inSpace = Ability_BreachJump.IsSpaceMap(map);
         Ability_BreachJump.NotifyThrusterGlowChanged(FlyingPawn);
-        if (respawningAfterLoad)
+        if (respawningAfterLoad || BeingTransportedOnGravship)
             return;
 
         var seconds = BreachJumpExtension.FlightSeconds(FlightDistance(this),
