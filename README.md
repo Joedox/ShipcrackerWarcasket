@@ -3,12 +3,10 @@
 > A RimWorld mod adding a late-game warcasket set for Vanilla Factions Expanded - Pirates
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.6-blue.svg)](https://rimworldgame.com/)
-<!-- Steam badges, added on first Workshop publish with WORKSHOP_ID from About/PublishedFileId.txt:
-[![Subscribers](https://img.shields.io/steam/subscriptions/WORKSHOP_ID?logo=steam&label=subscribers)](https://steamcommunity.com/sharedfiles/filedetails/?id=WORKSHOP_ID)
-[![Downloads](https://img.shields.io/steam/downloads/WORKSHOP_ID?logo=steam&label=downloads)](https://steamcommunity.com/sharedfiles/filedetails/?id=WORKSHOP_ID)
-[![Favorites](https://img.shields.io/steam/favorites/WORKSHOP_ID?logo=steam&label=favorites)](https://steamcommunity.com/sharedfiles/filedetails/?id=WORKSHOP_ID)
-[![Views](https://img.shields.io/steam/views/WORKSHOP_ID?logo=steam&label=views)](https://steamcommunity.com/sharedfiles/filedetails/?id=WORKSHOP_ID)
--->
+[![Subscribers](https://img.shields.io/steam/subscriptions/3814428597?logo=steam&label=subscribers)](https://steamcommunity.com/sharedfiles/filedetails/?id=3814428597)
+[![Downloads](https://img.shields.io/steam/downloads/3814428597?logo=steam&label=downloads)](https://steamcommunity.com/sharedfiles/filedetails/?id=3814428597)
+[![Favorites](https://img.shields.io/steam/favorites/3814428597?logo=steam&label=favorites)](https://steamcommunity.com/sharedfiles/filedetails/?id=3814428597)
+[![Views](https://img.shields.io/steam/views/3814428597?logo=steam&label=views)](https://steamcommunity.com/sharedfiles/filedetails/?id=3814428597)
 
 ![Preview](About/Preview.png)
 
@@ -69,7 +67,7 @@ gravship's roof vents the room behind it.
 
 ### Steam Workshop (Recommended)
 
-Coming with the first release.
+Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3814428597) and it will auto-download.
 
 ### Manual Installation
 

@@ -34,5 +34,4 @@ differ: schinese, koreana, brazilian, latam, ...). The `release` skill diffs
 whenever it changed.
 
 Every shipped language has a description file; the non-English ones are
-machine-assisted first passes pending native review. The page does not exist
-until the first release.
+machine-assisted first passes pending native review.
