@@ -82,15 +82,16 @@ public class PawnFlyer_BreachJump : AbilityPawnFlyer
         return true;
     }
 
-    // The exhaust is ticked after base.Tick, which advances ticksFlying and so DrawPos, where
-    // the sprayers spawn their flecks. Ticked before, each fleck would spawn a whole tick of
+    // The exhaust is ticked after base.TickInterval, which advances ticksFlying and so DrawPos,
+    // where the sprayers spawn their flecks (PawnFlyer moves in TickInterval, every tick, and
+    // Thing.DoTick runs Tick before it). Ticked before, each fleck would spawn a whole tick of
     // travel behind where the wearer is drawn this frame (0.6 cells at the space burn's speed)
     // and the trail would never overlap the body, which the north-facing raised flecks rely on.
-    // base.Tick destroys the flyer on landing, and Destroy has already cleaned the effecter up;
-    // recreating it here would replay the launch.
-    protected override void Tick()
+    // base.TickInterval destroys the flyer on landing, and Destroy has already cleaned the
+    // effecter up; recreating it here would replay the launch.
+    protected override void TickInterval(int delta)
     {
-        base.Tick();
+        base.TickInterval(delta);
         if (Destroyed)
             return;
 
