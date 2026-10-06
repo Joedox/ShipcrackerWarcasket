@@ -74,7 +74,6 @@ public class Ability_BreachJump : Ability, ISpacePreviewTester
     private Command gizmo;
     private string description;
     private bool descriptionInSpace;
-    private bool descriptionAutoCast;
     private float descriptionRange;
 
     // Cast state for the thruster glow, written by the wait toil's actions (see WarmupToil) and
@@ -112,6 +111,14 @@ public class Ability_BreachJump : Ability, ISpacePreviewTester
     public float PlanetRange => pawn.GetStatValue(SCWC_DefOf.SCWC_BreachJumpRange, applyPostProcess: true, RangeStatStaleTicks);
 
     public override float GetRangeForPawn() => InSpace ? SpaceRange : PlanetRange;
+
+    // VEF's only auto-cast consumer (its Pawn.TryGetAttackVerb postfix) reads
+    // CompAbilities.LearnedAbilities, never CompAbilitiesApparel.GivenAbilities, so an apparel
+    // ability's toggle would show the icon and tooltip line and then never fire. AutoCast is
+    // pinned off as well, since the scribed autoCast flag alone would still draw the icon.
+    public override bool CanAutoCast => false;
+
+    public override bool AutoCast => false;
 
     // The landing blast footprint, so VEF's DrawHighlight previews it at the hovered cell.
     public override float GetRadiusForPawn() => Ext.breachRadius;
@@ -274,20 +281,18 @@ public class Ability_BreachJump : Ability, ISpacePreviewTester
     // vacuum sentence after the description; the generated tail is kept as VEF wrote it.
     //
     // The result is cached against everything in it that can change for this def: the map kind
-    // (label, range line), the planet range stat and the auto-cast line. Cast time, cooldown,
-    // radius and power come straight off the def since it declares no stat factors or offsets,
-    // and it carries no AbilityExtension_AbilityMod to append lines of its own.
+    // (label, range line) and the planet range stat. Cast time, cooldown, radius and power come
+    // straight off the def since it declares no stat factors or offsets, and it carries no
+    // AbilityExtension_AbilityMod to append lines of its own.
     public override string GetDescriptionForPawn()
     {
         var inSpace = InSpace;
         var range = PlanetRange;
-        var autoCast = AutoCast;
-        if (description != null && inSpace == descriptionInSpace && range == descriptionRange && autoCast == descriptionAutoCast)
+        if (description != null && inSpace == descriptionInSpace && range == descriptionRange)
             return description;
 
         descriptionInSpace = inSpace;
         descriptionRange = range;
-        descriptionAutoCast = autoCast;
         return description = BuildDescription(inSpace);
     }
 
