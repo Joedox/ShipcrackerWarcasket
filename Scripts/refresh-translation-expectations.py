@@ -47,10 +47,10 @@ _MOD = ["shunter.shipcrackerwarcasket", "shunter.l10nprobe"]
 #   base     - no DLC: the text players without Odyssey read; nothing
 #              translatable may depend on Odyssey here, because the main
 #              tree loads for them too.
-#   odyssey  - the planned Odyssey compat root (LoadFolders.xml's commented
-#              Mods/Odyssey pair) opens here the day it goes live; the two
-#              MayRequire stat leaves drop a number, not a key, so today
-#              this world matches base.
+#   odyssey  - Odyssey without VGE. Odyssey-only content gates itself
+#              with MayRequire stat and cost leaves, which drop a number,
+#              not a key, so this world matches base; it is booted to keep
+#              that true.
 #   vge      - Vanilla Gravship Expanded (requires Odyssey) opens
 #              1.6/Mods/VanillaGravshipExpanded/, whose HelmetOxygen patch
 #              adds a [MustTranslate] chargeNoun to the main-tree helmet;

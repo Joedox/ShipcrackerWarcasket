@@ -24,8 +24,8 @@ engine.PACKAGE_ID = "shunter.shipcrackerwarcasket"
 
 # RATIONALE: the first six entries are the l10n CANONICAL_ACTIVE_MODS (the
 # refresh shim explains them: VFE Pirates is the hard dep, VEF and Harmony
-# are its deps, Odyssey is the planned compat gate). Save Our Ship 2 is the
-# only optional mod this repo integrates with: 1.6/Patches/SOS2Patch.xml
+# are its deps, Vanilla Gravship Expanded requires Odyssey). Save Our Ship 2
+# is the only optional mod this repo integrates with: 1.6/Patches/SOS2Patch.xml
 # fires on its display name (or Universum's) and never runs otherwise, and
 # a failed PatchOperation is exactly the kind of error only a boot with the
 # mod active can surface. SOS2 hard-requires Vehicle Framework, which is

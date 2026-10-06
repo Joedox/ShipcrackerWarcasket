@@ -20,11 +20,10 @@ engine.PARITY_EXEMPT_FIELDS = set()
 
 # RATIONALE: no DLC is a hard dependency (About.xml's modDependencies are
 # Harmony and VFE Pirates), but the sidecar is multi-world (see the refresh
-# shim's WORLDS) and Odyssey must be active in at least one of them: it is
-# the mod's planned compat gate (LoadFolders.xml's commented Mods/Odyssey
-# roots) and the gate Vanilla Gravship Expanded sits behind. Ideology stays
-# out: its MayRequire stat leaf drops a number, never a key, and nothing
-# here will ever gate translatable content on it.
+# shim's WORLDS) and Odyssey must be active in at least one of them: the
+# MayRequire stat and cost leaves gate on it, and Vanilla Gravship Expanded
+# requires it. Ideology stays out: its MayRequire stat leaf drops a number,
+# never a key, and nothing here will ever gate translatable content on it.
 engine.REQUIRED_DLCS = {"Odyssey"}
 
 # Every def here is a VFEPirates.WarcasketDef, a ThingDef subclass with no

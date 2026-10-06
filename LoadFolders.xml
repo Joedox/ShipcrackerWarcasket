@@ -2,24 +2,11 @@
 <loadFolders>
   <v1.6>
     <li>/</li>
-    <!-- With a LoadFolders.xml only the folders listed here load. Art sits under the mod
-         root, so "/" covers it; there is no Common/ root. -->
     <li>1.6</li>
-    <!-- Optional-mod/DLC compat roots, gated by package id via IfModActive: DefInjected
-         entries and textures cannot carry MayRequire, so the load root is the gate.
-         Mods/<Mod Name>/ holds version-independent content (art), 1.6/Mods/<Mod Name>/ the
-         Defs, Patches and the DefInjected that must share their root. The game only scans
-         well-known folders (Defs/, Languages/, Textures/, ...) directly under a load root,
-         so "/" and 1.6 never see Mods/.
-
-         Odyssey gate, for when the first Odyssey-only def, injection or texture lands:
-    <li IfModActive="ludeon.rimworld.odyssey">Mods/Odyssey</li>
-    <li IfModActive="ludeon.rimworld.odyssey">1.6/Mods/Odyssey</li>
-    -->
-    <!-- Vanilla Gravship Expanded (chapter 1): vacuum parity, helmet oxygen, space walking,
-         astrofuel and purple exhaust (see that root's Patches/ and Defs/). The Mods/ root
-         carries purple copies of the gizmo icons at the main tree's paths; a later load
-         folder wins a shared relative path, so it must stay below "/". -->
+    <!-- Vanilla Gravship Expanded (chapter 1) compat, gated by package id because textures
+         and DefInjected entries cannot carry MayRequire. Mods/ holds purple copies of the
+         gizmo icons at the main tree's paths; a later load folder wins a shared relative
+         path, so it must stay below "/". -->
     <li IfModActive="vanillaexpanded.gravship">Mods/VanillaGravshipExpanded</li>
     <li IfModActive="vanillaexpanded.gravship">1.6/Mods/VanillaGravshipExpanded</li>
   </v1.6>
